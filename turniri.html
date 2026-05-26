@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta name="description" content="Aktuelni turniri Padel Platz Kraljevo — Humanitarni turnir i druga takmičenja.">
+ <title>Aktuelni Turniri - Padel Platz</title>
+ <link rel="stylesheet" href="style.css?v=20260517">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+ <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+</head>
+<body>
+
+<!-- ==================== NAVBAR ==================== -->
+<nav class="navbar">
+ <div class="nav-wrap">
+  <a href="index.html" class="logo">PADEL <span>PLATZ</span></a>
+  <ul class="nav-links">
+   <li><a href="index.html">Početna</a></li>
+   <li><a href="galerija.html">Galerija</a></li>
+   <li><a href="cenovnik.html">Cenovnik</a></li>
+   <li><a href="pravila.html">Pravila</a></li>
+   <li><a href="rezervacija.html" class="active-nav">Rezervacija</a></li>
+   <li><a href="shop.html">Prodavnica</a></li>
+   <li><a href="kontakt.html">Kontakt</a></li>
+  </ul>
+  <div class="nav-right">
+   <a href="rezervacija.html" class="btn-nav"><i class="fas fa-calendar-check"></i> Rezerviši Termin</a>
+   <div class="cart-icon-container" onclick="toggleCart()">
+    <i class="fas fa-shopping-cart"></i>
+    <span id="cart-count">0</span>
+   </div>
+    <div class="lang-dropdown">
+    <button class="lang-toggle" aria-label="Select language" aria-expanded="false">
+     <i class="fas fa-globe"></i>
+     <span>Lng</span>
+     <i class="fas fa-chevron-down lang-chevron"></i>
+    </button>
+    <div class="lang-menu" hidden>
+     <button class="lang-option active" data-lang="sr">
+      <span class="lang-abbr">RS</span>
+      <span class="lang-flag"><img src="images/flags/rs.webp" alt="RS"></span>
+      <span class="lang-name">Srpski</span>
+     </button>
+     <button class="lang-option" data-lang="en">
+      <span class="lang-abbr">GB</span>
+      <span class="lang-flag"><img src="images/flags/gb.webp" alt="GB"></span>
+      <span class="lang-name">English</span>
+     </button>
+     <button class="lang-option" data-lang="hr">
+      <span class="lang-abbr">HR</span>
+      <span class="lang-flag"><img src="images/flags/hr.webp" alt="HR"></span>
+      <span class="lang-name">Hrvatski</span>
+     </button>
+     <button class="lang-option" data-lang="es">
+      <span class="lang-abbr">ES</span>
+      <span class="lang-flag"><img src="images/flags/es.webp" alt="ES"></span>
+      <span class="lang-name">Español</span>
+     </button>
+     <button class="lang-option" data-lang="de">
+      <span class="lang-abbr">DE</span>
+      <span class="lang-flag"><img src="images/flags/de.webp" alt="DE"></span>
+      <span class="lang-name">Deutsch</span>
+     </button>
+    </div>
+   </div>
+   <button class="hamburger" id="hamburger-btn" aria-label="Menu"><i class="fas fa-bars"></i></button>
+  </div>
+ </div>
+</nav>
+
+<!-- ==================== PAGE HERO ==================== -->
+ <section class="page-hero">
+  <div class="page-hero-overlay"></div>
+<div class="page-hero-content">
+    <h1>Aktuelni Turniri</h1>
+  <p>Saznajte sve o predstojećim takmičenjima, rasporedu mečeva i kotizacijama. Prijavite svoju ekipu na vreme!</p>
+ </div>
+</section>
+
+<!-- ==================== TOURNAMENTS SECTION ==================== -->
+<section class="turn-section">
+ <div class="container">
+  <h2 class="st" data-i18n="tournaments.title">Aktuelni Turniri</h2>
+  <p class="ss">Pratite najnovije vesti i raspored svih nadolazećih takmičenja na Padel Platz Kraljevo</p>
+
+  <!-- ── Tournament Card ── -->
+  <div class="tournament-card">
+   <div class="tourn-top-bar">
+    <span class="tourn-status"><i class="fas fa-circle"></i> U toku</span>
+    <span class="tourn-date"><i class="fas fa-calendar-alt"></i> 09. maj 2026.</span>
+   </div>
+
+   <div class="tourn-body">
+    <div class="tourn-info">
+     <span class="tourn-label"><i class="fas fa-trophy"></i> Humanitarni Turnir</span>
+     <h3>Humanitarni Turnir 09.05.</h3>
+
+     <div class="tourn-meta">
+      <div class="tourn-meta-item">
+       <i class="fas fa-calendar-check"></i>
+       <div>
+        <small>Datum</small>
+        <strong>09.05.2026.</strong>
+       </div>
+      </div>
+      <div class="tourn-meta-item">
+       <i class="fas fa-money-bill-wave"></i>
+       <div>
+        <small>Kotizacija</small>
+        <strong>2.000 RSD / tim</strong>
+       </div>
+      </div>
+     </div>
+
+     <p class="tourn-desc">
+      Humanitarni turnir je manifestacija koja kombinuje ljubav prema padelu sa ciljem pomoći onima kojima je pomoć potrebna. Svaki uplaćeni iznos ide u humanitarne svrhe, a pored takmičenja planiramo i zabavni deo za sve učešnike i posetioce.
+     </p>
+
+      <div class="tourn-tags">
+       <span class="tourn-tag"><i class="fas fa-users"></i> Ekipno takmičenje</span>
+       <span class="tourn-tag"><i class="fas fa-gift"></i> Nagradni fond</span>
+       <span class="tourn-tag"><i class="fas fa-heart"></i> Humanitarno</span>
+      </div>
+
+      <div class="tourn-action">
+       <a href="rezervacija.html" class="tourn-btn"><i class="fas fa-arrow-right"></i> Prijavi se</a>
+      </div>
+     </div>
+    </div>
+
+</div>
+ </section>
+
+ <!-- Back to home -->
+ <div style="text-align:center;margin:60px 0 60px;">
+  <a href="index.html" style="display:inline-flex;align-items:center;gap:8px;font-size:.9rem;font-weight:700;color:var(--primary-dark);background:var(--white);border:2px solid var(--primary);padding:10px 30px;border-radius:50px;text-decoration:none;transition:all .25s;box-shadow:var(--shadow);text-transform:uppercase;letter-spacing:.5px;">
+   <i class="fas fa-arrow-left"></i> Nazad Na Početnu
+  </a>
+ </div>
+
+<!-- ==================== CTA ==================== -->
+<section class="cta-section">
+  <div class="container">
+   <h2>Spremni za Igru?</h2>
+   <p>Pridružite nam se na jednom od nadolazećih turnira — registrujte se još danas!</p>
+   <div class="cta-actions">
+    <a href="rezervacija.html" class="btn-h"><i class="fas fa-calendar-check"></i> Rezerviši Termin</a>
+    <a href="kontakt.html" class="btn-w"><i class="fas fa-phone"></i> Pozovite Nas</a>
+   </div>
+  </div>
+ </section>
+
+<!-- Spacer between CTA and footer -->
+<div style="height:60px;background:linear-gradient(180deg,var(--primary),var(--primary-dark));"></div>
+
+<!-- ==================== FOOTER ==================== -->
+<footer class="footer">
+ <div class="container">
+ <div class="footer-grid">
+ <div class="fb">
+ <a href="index.html" class="logo">PADEL <span>PLATZ</span></a>
+ <p data-i18n="footer.about">Prvi padel centar u Kraljevu — vaše padel iskustvo na prvom mestu.</p>
+ <div class="social-links">
+ <a href="https://www.facebook.com/people/Padel-Platz/61575166736911" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+ <a href="https://www.instagram.com/padelplatz/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+ <a href="https://www.tiktok.com/@padel.platz" target="_blank" rel="noopener" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+ </div>
+ </div>
+ <div>
+ <h4 data-i18n="footer.links">Prečice</h4>
+  <ul class="footer-links">
+  <li><a href="index.html" data-i18n="nav.home">Početna</a></li>
+  <li><a href="galerija.html" data-i18n="nav.gallery">Galerija</a></li>
+  <li><a href="cenovnik.html" data-i18n="nav.pricing">Cenovnik</a></li>
+  <li><a href="pravila.html" data-i18n="nav.rules">Pravila</a></li>
+  <li><a href="rezervacija.html" data-i18n="nav.booking">Rezervacija</a></li>
+  <li><a href="shop.html" data-i18n="nav.shop">Prodavnica</a></li>
+  <li><a href="kontakt.html" data-i18n="nav.contact">Kontakt</a></li>
+  </ul>
+  </div>
+  <div>
+  <h4 data-i18n="footer.hours">Radno Vreme</h4>
+  <ul class="footer-links">
+  <li><a href="#"><span data-i18n="footer.monFri">Pon - Pet: 08:00 - 24:00</span></a></li>
+  <li><a href="#"><span data-i18n="footer.sat">Subota: 09:00 - 22:00</span></a></li>
+  <li><a href="#"><span data-i18n="footer.sun">Nedelja: 10:00 - 20:00</span></a></li>
+  </ul>
+  </div>
+  <div>
+  <h4 data-i18n="footer.contactTitle">Kontakt</h4>
+  <ul class="footer-links">
+  <li><a href="tel:+381668123647">📞 +381 66 8123 647</a></li>
+  <li><a href="mailto:info@padelplatz.rs">✉ info@padelplatz.rs</a></li>
+  <li><a href="https://www.google.com/maps/@43.7214157,20.6823418,591m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI2MDUwNi4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener" style="color:var(--primary)">📍 Milomira Glavčića 18</a></li>
+   </ul>
+   </div>
+  </div>
+  <div class="footer-bottom">
+ <p>&copy; <span id="cy">2026</span> Padel Platz Kraljevo. Sva prava zadržana.</p>
+ </div>
+ </div>
+</footer>
+
+<!-- ==================== MOBILE MENU ==================== -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" aria-label="Zatvori">&times;</button>
+  <a href="index.html">🏠 Početna</a>
+  <a href="galerija.html">📸 Galerija</a>
+  <a href="cenovnik.html">💰 Cenovnik</a>
+  <a href="pravila.html">📋 Pravila</a>
+  <a href="rezervacija.html">📅 Rezervacija</a>
+  <a href="shop.html">🛒 Prodavnica</a>
+  <a href="turniri.html">🏆 Turniri</a>
+  <a href="kontakt.html">📞 Kontakt</a>
+  <div class="mobile-lang-section">
+  <div class="mobile-lang-label">Jezik / Language</div>
+  <button class="mobile-lang-btn" data-lang="sr">🇷🇸</button>
+  <button class="mobile-lang-btn" data-lang="en">🇬🇧</button>
+  <button class="mobile-lang-btn" data-lang="hr">🇭🇷</button>
+  <button class="mobile-lang-btn" data-lang="es">🇪🇸</button>
+  <button class="mobile-lang-btn" data-lang="de">🇩🇪</button>
+  </div>
+  <a href="rezervacija.html" class="mm-btn">✅ Rezerviši Termin</a>
+</div>
+
+<script src="main.js"></script>
+<script>
+ document.addEventListener('DOMContentLoaded', function(){
+  document.querySelectorAll('.year-js').forEach(function(el){
+   el.textContent = new Date().getFullYear();
+  });
+ });
+</script>
+</body>
+</html>

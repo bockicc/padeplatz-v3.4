@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta name="description" content="Rialto Pro Light 2.0 — 34.900 RSD. Lakša verzija za brzinu i manevrabilnost.">
+ <meta property="og:title" content="Rialto Pro Light 2.0 - Padel Platz Shop">
+ <meta property="og:description" content="Ista moć, manja težina — lakši Rialto bez kompromisa.">
+ <title>Rialto Pro Light 2.0 - Padel Platz</title>
+ <link rel="stylesheet" href="style.css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+ <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+</head>
+<body>
+
+<nav class="navbar">
+ <div class="nav-wrap">
+  <a href="index.html" class="logo">PADEL <span>PLATZ</span></a>
+  <ul class="nav-links">
+   <li><a href="index.html">Početna</a></li>
+   <li><a href="galerija.html">Galerija</a></li>
+   <li><a href="cenovnik.html">Cenovnik</a></li>
+   <li><a href="pravila.html">Pravila</a></li>
+   <li><a href="rezervacija.html">Rezervacija</a></li>
+   <li><a href="shop.html">Prodavnica</a></li>
+   <li><a href="kontakt.html">Kontakt</a></li>
+  </ul>
+ <div class="nav-right">
+   <a href="rezervacija.html" class="btn-nav"><i class="fas fa-calendar-check"></i> Rezerviši Termin</a>
+   <div class="cart-icon-container" onclick="toggleCart()">
+   <i class="fas fa-shopping-cart"></i>
+   <span id="cart-count">0</span>
+  </div>
+  <div class="lang-dropdown">
+   <button class="lang-toggle" aria-label="Select language" aria-expanded="false">
+    <i class="fas fa-globe"></i>
+    <span>Lng</span>
+    <i class="fas fa-chevron-down lang-chevron"></i>
+   </button>
+   <div class="lang-menu" hidden>
+     <button class="lang-option active" data-lang="sr">
+      <span class="lang-abbr">RS</span>
+      <span class="lang-flag"><img src="images/flags/rs.webp" alt="RS"></span>
+      <span class="lang-name">Srpski</span>
+     </button>
+     <button class="lang-option" data-lang="en">
+      <span class="lang-abbr">GB</span>
+      <span class="lang-flag"><img src="images/flags/gb.webp" alt="GB"></span>
+      <span class="lang-name">English</span>
+     </button>
+     <button class="lang-option" data-lang="hr">
+      <span class="lang-abbr">HR</span>
+      <span class="lang-flag"><img src="images/flags/hr.webp" alt="HR"></span>
+      <span class="lang-name">Hrvatski</span>
+     </button>
+     <button class="lang-option" data-lang="es">
+      <span class="lang-abbr">ES</span>
+      <span class="lang-flag"><img src="images/flags/es.webp" alt="ES"></span>
+      <span class="lang-name">Español</span>
+     </button>
+     <button class="lang-option" data-lang="de">
+      <span class="lang-abbr">DE</span>
+      <span class="lang-flag"><img src="images/flags/de.webp" alt="DE"></span>
+      <span class="lang-name">Deutsch</span>
+     </button>
+    </div>
+   </div>
+   <button class="hamburger" id="hamburger-btn" aria-label="Menu"><i class="fas fa-bars"></i></button>
+  </div>
+ </div>
+</nav>
+
+<section class="product-hero">
+ <div class="product-hero-content">
+  <h1>Rialto Pro Light 2.0</h1>
+  <p>Lakša verzija Rialto Pro — savršena za igrače koji cene brzinu i manevrabilnost bez kompromisa.</p>
+  <span class="hero-accent"></span>
+ </div>
+</section>
+
+<section class="product-section">
+ <div class="product-container">
+  <a href="shop.html" class="back-to-shop"><i class="fas fa-arrow-left"></i> Nazad na ponudu</a>
+  <span class="pd-gap"></span>
+
+   <div class="product-detail-grid">
+
+    <!-- ── Gallery ── -->
+    <div class="product-image-large">
+     <div class="gallery-wrap" id="gallery-rialto-light">
+      <div class="gallery-viewport">
+       <div class="gallery-track" id="gallery-track-rialto-light">
+        <span><img src="images/rackets/rialto-pro-light-1.webp" alt="Rialto Pro Light 2.0 - Pogled 1"></span>
+        <span><img src="images/rackets/rialto-pro-light-2.webp" alt="Rialto Pro Light 2.0 - Pogled 2"></span>
+        <span><img src="images/rackets/rialto-pro-light-3.webp" alt="Rialto Pro Light 2.0 - Pogled 3"></span>
+        <span><img src="images/rackets/rialto-pro-light-4.webp" alt="Rialto Pro Light 2.0 - Pogled 4"></span>
+       </div>
+      </div>
+      <button class="gallery-arrow gallery-prev" data-gallery="gallery-rialto-light">&#10094;</button>
+      <button class="gallery-arrow gallery-next" data-gallery="gallery-rialto-light">&#10095;</button>
+      <div class="gallery-counter" id="gallery-counter-rialto-light">1 / 4</div>
+
+      <!-- thumbnail strip -->
+      <div class="gallery-thumbs">
+       <div class="gallery-thumb active" data-gallery="gallery-rialto-light" data-slide="0">
+        <img src="images/rackets/rialto-pro-light-1.webp" alt="Thumb 1"></div>
+       <div class="gallery-thumb" data-gallery="gallery-rialto-light" data-slide="1">
+        <img src="images/rackets/rialto-pro-light-2.webp" alt="Thumb 2"></div>
+       <div class="gallery-thumb" data-gallery="gallery-rialto-light" data-slide="2">
+        <img src="images/rackets/rialto-pro-light-3.webp" alt="Thumb 3"></div>
+       <div class="gallery-thumb" data-gallery="gallery-rialto-light" data-slide="3">
+        <img src="images/rackets/rialto-pro-light-4.webp" alt="Thumb 4"></div>
+      </div>
+
+     </div>
+    </div>
+
+    <!-- ── Product Info ── -->
+    <div class="product-info">
+     <h2>Rialto Pro Light 2.0</h2>
+     <div class="product-price">34.900 RSD</div>
+     <p class="product-desc">Lakša verzija Rialto Pro — savršena za igrače koji cene brzinu i manevrabilnost bez kompromisa. Idealna za sve koji žele agilnost bez gubitka snage.</p>
+    </div>
+
+   </div><!-- /product-detail-grid -->
+
+  <div class="product-details-section">
+   <h3>📋 Opis</h3>
+   <p>Rialto Pro Light 2.0 je postao jedan od najvećih uspeha na tržištu. Dobijamo pohvale od test igrača i kupaca, koji obećavaju da ćete imati izvanredno iskustvo u takmičenjima. Sada vam nudimo ovaj model u lakšoj verziji. Rialto Pro Light je napravljen za one koji traže lakši reket, ali sa istim karakteristikama kao i Rialto Pro 2.0, kao što su veliki sweet spot, fin balans i lakša igra. Rialto Pro Light je pogodan za muškarce sa bolovima u ramenima ili laktovima, kao i za žene koje traže premium reket u lakšoj težini.</p>
+
+   <div class="feature-grid">
+    <div class="feature-block">
+     <div class="feature-block-title"><i class="fas fa-rocket"></i> Light verzija</div>
+     <ul>
+      <li>Sva karakteristika Rialto Pro 2.0 u lakšem paketu</li>
+      <li>Savršena za igrače s bolovima u ramenima ili laktovima</li>
+      <li>Manja težina = veća brzina i manevrabilnost</li>
+     </ul>
+    </div>
+    <div class="feature-block">
+     <div class="feature-block-title"><i class="fas fa-bullseye"></i> Kontrola</div>
+     <ul>
+      <li>Napredna tehnologija reketa</li>
+      <li>RS 3D + Grid Lock sistem na površini za maksimalni spin</li>
+      <li>Jedinstven sweet spot vertikalno i horizontalno</li>
+     </ul>
+    </div>
+   </div>
+  </div>
+
+  <div class="product-specs">
+   <h3><i class="fas fa-list-ul"></i>Specifikacije</h3>
+   <table class="spec-table">
+    <tr><td>Težina</td><td>355 g (+/- 5 g)</td></tr>
+    <tr><td>Balans</td><td>Nizak</td></tr>
+    <tr><td>Materijal / Okvir</td><td>Karbon</td></tr>
+    <tr><td>Face / Površina</td><td>3K Karbon</td></tr>
+    <tr><td>Grip uzgona</td><td>3D Grid Pattern</td></tr>
+    <tr><td>Oblik</td><td>Tear Drop</td></tr>
+    <tr><td>Profil</td><td>38 mm</td></tr>
+   </table>
+  </div>
+
+ </div>
+</section>
+
+<footer class="footer">
+ <div class="container">
+  <div class="footer-grid">
+   <div class="fb">
+    <a href="index.html" class="logo">PADEL <span>PLATZ</span></a>
+    <p>Prvi padel centar u Kraljevu — vaše padel iskustvo na prvom mestu.</p>
+    <div class="social-links">
+     <a href="https://www.facebook.com/people/Padel-Platz/61575166736911" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+     <a href="https://www.instagram.com/padelplatz/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+     <a href="https://www.tiktok.com/@padel.platz" target="_blank" rel="noopener" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+    </div>
+   </div>
+   <div>
+     <h4>Prečice</h4>
+     <ul class="footer-links">
+      <li><a href="index.html">Početna</a></li>
+      <li><a href="galerija.html">Galerija</a></li>
+      <li><a href="cenovnik.html">Cenovnik</a></li>
+      <li><a href="pravila.html">Pravila</a></li>
+      <li><a href="rezervacija.html">Rezervacija</a></li>
+      <li><a href="shop.html">Prodavnica</a></li>
+      <li><a href="kontakt.html">Kontakt</a></li>
+     </ul>
+   </div>
+   <div>
+    <h4>Radno Vreme</h4>
+    <ul class="footer-links">
+     <li><a href="#">Pon - Pet: 08:00 - 24:00</a></li>
+     <li><a href="#">Subota: 09:00 - 22:00</a></li>
+     <li><a href="#">Nedelja: 10:00 - 20:00</a></li>
+    </ul>
+   </div>
+   <div>
+    <h4>Kontakt</h4>
+    <ul class="footer-links">
+     <li><a href="tel:+381668123647">📞 +381 66 8123 647</a></li>
+     <li><a href="mailto:info@padelplatz.rs">✉ info@padelplatz.rs</a></li>
+     <li><a href="https://www.google.com/maps/@43.7214157,20.6823418,591m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI2MDUwNi4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener" style="color:var(--primary)">📍 Milomira Glavčića 18</a></li>
+    </ul>
+   </div>
+  </div>
+  <div class="footer-bottom">
+   <p>&copy; <span id="cy">2026</span> Padel Platz Kraljevo. Sva prava zadržana.</p>
+  </div>
+ </div>
+</footer>
+
+<div class="mobile-menu" id="mobileMenu">
+ <button class="mobile-close" aria-label="Zatvori">&times;</button>
+ <a href="index.html">🏠 Početna</a>
+ <a href="o-nama.html">ℹ️ O Nama</a>
+ <a href="galerija.html">📸 Galerija</a>
+ <a href="cenovnik.html">💰 Cenovnik</a>
+ <a href="pravila.html">📋 Pravila</a>
+ <a href="rezervacija.html">📅 Rezervacija</a>
+ <a href="shop.html">🛒 Prodavnica</a>
+ <a href="kontakt.html">📞 Kontakt</a>
+ <a href="rezervacija.html" class="mm-btn">✅ Rezerviši Termin</a>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>

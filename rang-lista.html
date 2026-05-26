@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta name="description" content="Rang lista Padel Platz Kraljevo — pratite plasman najboljih parova i poslednje odigrane mečeve.">
+ <title>Rang Lista - Padel Platz</title>
+ <link rel="stylesheet" href="style.css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+ <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+</head>
+<body>
+
+<!-- ==================== NAVBAR ==================== -->
+<nav class="navbar">
+ <div class="nav-wrap">
+  <a href="index.html" class="logo">PADEL <span>PLATZ</span></a>
+   <ul class="nav-links">
+    <li><a href="index.html">Početna</a></li>
+    <li><a href="galerija.html">Galerija</a></li>
+    <li><a href="cenovnik.html">Cenovnik</a></li>
+    <li><a href="pravila.html">Pravila</a></li>
+    <li><a href="rezervacija.html">Rezervacija</a></li>
+    <li><a href="shop.html">Prodavnica</a></li>
+    <li><a href="kontakt.html">Kontakt</a></li>
+   </ul>
+  <div class="nav-right">
+   <a href="rezervacija.html" class="btn-nav"><i class="fas fa-calendar-check"></i> Rezerviši Termin</a>
+   <div class="cart-icon-container" onclick="toggleCart()">
+    <i class="fas fa-shopping-cart"></i>
+    <span id="cart-count">0</span>
+   </div>
+   <div class="lang-dropdown">
+    <button class="lang-toggle" aria-label="Select language" aria-expanded="false">
+     <i class="fas fa-globe"></i>
+     <span>Lng</span>
+     <i class="fas fa-chevron-down lang-chevron"></i>
+    </button>
+    <div class="lang-menu" hidden>
+     <button class="lang-option active" data-lang="sr">
+      <span class="lang-abbr">RS</span>
+      <span class="lang-flag"><img src="images/flags/rs.webp" alt="RS"></span>
+      <span class="lang-name">Srpski</span>
+     </button>
+     <button class="lang-option" data-lang="en">
+      <span class="lang-abbr">GB</span>
+      <span class="lang-flag"><img src="images/flags/gb.webp" alt="GB"></span>
+      <span class="lang-name">English</span>
+     </button>
+     <button class="lang-option" data-lang="hr">
+      <span class="lang-abbr">HR</span>
+      <span class="lang-flag"><img src="images/flags/hr.webp" alt="HR"></span>
+      <span class="lang-name">Hrvatski</span>
+     </button>
+     <button class="lang-option" data-lang="es">
+      <span class="lang-abbr">ES</span>
+      <span class="lang-flag"><img src="images/flags/es.webp" alt="ES"></span>
+      <span class="lang-name">Español</span>
+     </button>
+     <button class="lang-option" data-lang="de">
+      <span class="lang-abbr">DE</span>
+      <span class="lang-flag"><img src="images/flags/de.webp" alt="DE"></span>
+      <span class="lang-name">Deutsch</span>
+     </button>
+    </div>
+   </div>
+   <button class="hamburger" id="hamburger-btn" aria-label="Menu"><i class="fas fa-bars"></i></button>
+  </div>
+ </div>
+</nav>
+
+<!-- ==================== PAGE HERO ==================== -->
+ <section class="page-hero">
+  <div class="page-hero-overlay"></div>
+<div class="page-hero-content">
+    <h1>Rang Lista</h1>
+   <p>Pratite plasman najboljih parova u klubu i beležite svoje pobede. Sezona traje do 30. decembra 2026.</p>
+  </div>
+</section>
+
+<!-- ==================== SEASON STATS BAR ==================== -->
+<section class="stats-bar-section" style="background:linear-gradient(180deg,#111827 0%,#1a1110 40%,#111827 100%);padding:60px 0 30px;">
+ <div class="container">
+  <div class="stats-bar-grid">
+   <div class="stats-bar-item">
+    <div class="stats-bar-icon"><i class="fas fa-users"></i></div>
+    <div class="stats-bar-info">
+     <span class="stats-bar-num">32</span>
+     <span class="stats-bar-label">Prijavljenih parova</span>
+    </div>
+   </div>
+   <div class="stats-bar-item">
+    <div class="stats-bar-icon"><i class="fas fa-calendar-alt"></i></div>
+    <div class="stats-bar-info">
+     <span class="stats-bar-num">18</span>
+     <span class="stats-bar-label">Mečeva u sezoni</span>
+    </div>
+   </div>
+   <div class="stats-bar-item">
+    <div class="stats-bar-icon"><i class="fas fa-trophy"></i></div>
+    <div class="stats-bar-info">
+     <span class="stats-bar-num">1. mesto</span>
+     <span class="stats-bar-label">Vodeći par</span>
+    </div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<!-- ==================== RANKING TABLE ==================== -->
+<section class="rank-section" id="tabela" style="background:linear-gradient(180deg,var(--white) 0%,var(--light) 100%);padding:80px 0;">
+ <div class="container">
+  <h2 class="st"><i class="fas fa-crown" aria-hidden="true"></i>Lestvica prvih 5 parova</h2>
+  <p class="ss">Najbolje plasirani parovi u tekućoj sezoni — ažurirano: 17. maj 2026.</p>
+  
+  <div class="rank-table-wrap">
+   <table class="rank-table">
+    <thead>
+     <tr>
+      <th class="rank-col-rank">#</th>
+      <th class="rank-col-name">Par / Igrač</th>
+      <th class="rank-col-p">M</th>
+      <th class="rank-col-pct">%</th>
+      <th class="rank-col-w">Pobede</th>
+      <th class="rank-col-l">Porazi</th>
+      <th class="rank-col-l">Setovi W/L</th>
+      <th class="rank-col-pts">Bodovi</th>
+     </tr>
+    </thead>
+    <tbody>
+     <tr class="rank-gold">
+      <td><span class="rank-badge rank-badge--gold">🥇 1</span></td>
+      <td><span class="rank-name"><strong>Danijel Jovanović / Rus</strong></span></td>
+      <td>12</td>
+      <td><span class="rank-win-pct"><strong>91,7%</strong></span></td>
+      <td>11</td>
+      <td>1</td>
+      <td class="rank-sets-w">24–5</td>
+      <td class="rank-pts-high"><strong>33</strong></td>
+     </tr>
+     <tr>
+      <td><span class="rank-badge rank-badge--silver">🥈 2</span></td>
+      <td><span class="rank-name"><strong>Veljko Radojević / Minjo Padelinjo</strong></span></td>
+      <td>10</td>
+      <td><span class="rank-win-pct"><strong>80,0%</strong></span></td>
+      <td>8</td>
+      <td>2</td>
+      <td class="rank-sets-w">18–7</td>
+      <td class="rank-pts-high"><strong>24</strong></td>
+     </tr>
+     <tr>
+      <td><span class="rank-badge rank-badge--bronze">🥉 3</span></td>
+      <td><span class="rank-name"><strong>Luka Nikolić / Stefan Đorđević</strong></span></td>
+      <td>10</td>
+      <td><span class="rank-win-pct"><strong>70,0%</strong></span></td>
+      <td>7</td>
+      <td>3</td>
+      <td>16–9</td>
+      <td class="rank-pts-high"><strong>21</strong></td>
+     </tr>
+     <tr>
+      <td><span class="rank-badge">4</span></td>
+      <td><span class="rank-name"><strong>Aleksa Petrović / Nikola Stojanović</strong></span></td>
+      <td>9</td>
+      <td><span class="rank-win-pct">63,7%</span></td>
+      <td>6</td>
+      <td>3</td>
+      <td>13–8</td>
+      <td>18</td>
+     </tr>
+     <tr>
+      <td><span class="rank-badge">5</span></td>
+      <td><span class="rank-name"><strong>Milan Stamenković / Đorđe Mitić</strong></span></td>
+      <td>8</td>
+      <td><span class="rank-win-pct">62,5%</span></td>
+      <td>5</td>
+      <td>3</td>
+      <td>11–9</td>
+      <td>15</td>
+     </tr>
+    </tbody>
+   </table>
+  </div>
+  
+  <!-- Statistika ispod tabele -->
+  <div class="rank-summary" style="margin-top:28px;justify-content:center;">
+   <div class="rank-summary-item">
+    <span class="rank-sum-icon"><i class="fas fa-chart-line"></i></span>
+    <span class="rank-sum-text">Vodeći par <strong>Jovanović / Rus</strong> +9 bodova od drugog</span>
+   </div>
+   <div class="rank-summary-item">
+    <span class="rank-sum-icon"><i class="fas fa-fire"></i></span>
+    <span class="rank-sum-text"><strong>8 uzastopnih pobeda</strong> za prvo mesto</span>
+   </div>
+  </div>
+ </div>
+</section>
+
+<!-- ==================== LAST MATCHES ==================== -->
+<section class="last-matches-section" style="background:var(--light);padding:30px 0 60px;" aria-labelledby="last-matches-heading">
+ <div class="container">
+  <h2 class="st" id="last-matches-heading"><i class="fas fa-clock"></i>Poslednji Odigrani Mečevi</h2>
+  <p class="ss">Najnoviji rezultati sa klubske rang liste — sezona 2026</p>
+  <div class="matches-grid">
+   <div class="match-card reveal">
+    <div class="match-card-top">
+     <span class="match-tag match-tag--live"><i class="fas fa-check"></i> Završeno</span>
+     <span class="match-date">07.05.2026.</span>
+    </div>
+    <div class="match-score">
+     <div class="match-team"><span class="match-team-name">Jovanović / <br> Rus</span></div>
+     <div class="match-score-box"><strong>6 : 4</strong></div>
+     <div class="match-team"><span class="match-team-name">Radojević / Minjo</span></div>
+    </div>
+   </div>
+   <div class="match-card reveal">
+    <div class="match-card-top">
+     <span class="match-tag match-tag--live"><i class="fas fa-check"></i> Završeno</span>
+     <span class="match-date">05.05.2026.</span>
+    </div>
+    <div class="match-score">
+     <div class="match-team"><span class="match-team-name">Nikolić / Đorđević</span></div>
+     <div class="match-score-box"><strong>7 : 5</strong></div>
+     <div class="match-team"><span class="match-team-name">Petrović / Stojanović</span></div>
+    </div>
+   </div>
+   <div class="match-card reveal">
+    <div class="match-card-top">
+     <span class="match-tag match-tag--live"><i class="fas fa-check"></i> Završeno</span>
+     <span class="match-date">03.05.2026.</span>
+    </div>
+    <div class="match-score">
+     <div class="match-team"><span class="match-team-name">Stamenković / Mitić</span></div>
+     <div class="match-score-box"><strong>6 : 3</strong></div>
+     <div class="match-team"><span class="match-team-name">Novaković / Todorović</span></div>
+    </div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<!-- ==================== RANKING RULES ==================== -->
+<section class="section" style="background:var(--white);padding-top:60px;padding-bottom:40px;">
+ <div class="container">
+  <h2 class="st"><i class="fas fa-scroll" aria-hidden="true"></i>Pravila Lestvice</h2>
+  <p class="ss">Sve što treba da znate pre nego što počnete da takmičite</p>
+  
+  <div class="rules-card" style="max-width:700px;margin:0 auto 40px;">
+   <ul class="rules-list">
+    <li>
+     <span class="ri"><i class="fas fa-user-plus"></i></span>
+     <span><strong>Prijava za Meč:</strong><span>Svaki par koji želi da učestvuje u rang listi mora biti registrovan kod administratora kluba. Prijava se vrši putem forme na sajtu ili lično na recepciji.</span></span>
+    </li>
+    <li>
+     <span class="ri"><i class="fas fa-trophy"></i></span>
+     <span><strong>Način Igranja:</strong><span>Mečevi se igraju na najbolje od 2 seta (do 6 gemova, tie-break na 7). Ako oba para osvoje po 1 set svaki, igra se super tie-break do 10 bodova.</span></span>
+    </li>
+    <li>
+     <span class="ri"><i class="fas fa-star"></i></span>
+     <span><strong>Bodovanje:</strong><span>Za pobedu osvajate 3 boda, za poraz 0. Bodovi se zbraju tokom cele sezone i određuju finalni plasman na lestvici.</span></span>
+    </li>
+    <li>
+     <span class="ri"><i class="fas fa-calendar-week"></i></span>
+     <span><strong>Ažuriranje Lestvice:</strong><span>Lestvica se ažurira svakog ponedeljka i objavljuje na ovoj stranici. Svi mečevi moraju biti potvrđeni od strane administratora.</span></span>
+    </li>
+    <li>
+     <span class="ri"><i class="fas fa-medal"></i></span>
+     <span><strong>Nagrade:</strong><span>Prva tri pare na kraju sezone dobijaju besplatne termine i medalje – 1. mesto: 10 sati, 2. mesto: 5 sati, 3. mesto: 3 sata.</span></span>
+    </li>
+   </ul>
+  </div>
+</div>
+  </section>
+
+ <!-- Back to home -->
+ <div style="text-align:center;margin:20px 0 60px;">
+  <a href="index.html" style="display:inline-flex;align-items:center;gap:8px;font-size:.9rem;font-weight:700;color:var(--primary-dark);background:var(--white);border:2px solid var(--primary);padding:10px 30px;border-radius:50px;text-decoration:none;transition:all .25s;box-shadow:var(--shadow);text-transform:uppercase;letter-spacing:.5px;">
+   <i class="fas fa-arrow-left"></i> Nazad Na Početnu
+  </a>
+ </div>
+
+<!-- ==================== CTA ==================== -->
+<section class="cta-section" style="background:linear-gradient(135deg,var(--primary),var(--primary-dark));padding:80px 0;">
+ <div class="container">
+  <h2 style="color:var(--white);font-size:clamp(1.6rem,3.5vw,2.4rem);margin-bottom:16px;">Imate tim? Želite da igrate?</h2>
+  <p style="color:rgba(255,255,255,.92);margin-bottom:32px;max-width:520px;margin-left:auto;margin-right:auto;font-size:1.05rem;line-height:1.65;">Prijavite se za nadolazeće turnire i osvojite svoje mesto na lestvici</p>
+  <div style="display:flex;gap:18px;justify-content:center;flex-wrap:wrap;margin-top:36px;">
+   <a href="turniri.html" class="btn-h"><i class="fas fa-calendar-check"></i> Svi Turniri</a>
+   <a href="kontakt.html" class="btn-w"><i class="fas fa-phone"></i> Kontakt</a>
+  </div>
+ </div>
+</section>
+
+<!-- Spacer between CTA and footer -->
+<div style="height:60px;background:linear-gradient(180deg,var(--primary-dark),var(--surface));"></div>
+
+<!-- ==================== FOOTER ==================== -->
+<footer class="footer">
+ <div class="container">
+ <div class="footer-grid">
+ <div class="fb">
+ <a href="index.html" class="logo">PADEL <span>PLATZ</span></a>
+ <p data-i18n="footer.about">Prvi padel centar u Kraljevu — vaše padel iskustvo na prvom mestu.</p>
+ <div class="social-links">
+ <a href="https://www.facebook.com/people/Padel-Platz/61575166736911" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+ <a href="https://www.instagram.com/padelplatz/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+ <a href="https://www.tiktok.com/@padel.platz" target="_blank" rel="noopener" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+ </div>
+ </div>
+ <div>
+ <h4 data-i18n="footer.links">Prečice</h4>
+  <ul class="footer-links">
+  <li><a href="index.html" data-i18n="nav.home">Početna</a></li>
+  <li><a href="galerija.html" data-i18n="nav.gallery">Galerija</a></li>
+  <li><a href="cenovnik.html" data-i18n="nav.pricing">Cenovnik</a></li>
+  <li><a href="pravila.html" data-i18n="nav.rules">Pravila</a></li>
+  <li><a href="rezervacija.html" data-i18n="nav.booking">Rezervacija</a></li>
+  <li><a href="shop.html" data-i18n="nav.shop">Prodavnica</a></li>
+  <li><a href="kontakt.html" data-i18n="nav.contact">Kontakt</a></li>
+  </ul>
+  </div>
+  <div>
+  <h4 data-i18n="footer.hours">Radno Vreme</h4>
+  <ul class="footer-links">
+  <li><a href="#"><span data-i18n="footer.monFri">Pon - Pet: 08:00 - 24:00</span></a></li>
+  <li><a href="#"><span data-i18n="footer.sat">Subota: 09:00 - 22:00</span></a></li>
+  <li><a href="#"><span data-i18n="footer.sun">Nedelja: 10:00 - 20:00</span></a></li>
+  </ul>
+  </div>
+  <div>
+  <h4 data-i18n="footer.contactTitle">Kontakt</h4>
+  <ul class="footer-links">
+  <li><a href="tel:+381668123647">📞 +381 66 8123 647</a></li>
+  <li><a href="mailto:info@padelplatz.rs">✉ info@padelplatz.rs</a></li>
+  <li><a href="https://www.google.com/maps/@43.7214157,20.6823418,591m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI2MDUwNi4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener" style="color:var(--primary)">📍 Milomira Glavčića 18</a></li>
+   </ul>
+   </div>
+  </div>
+  <div class="footer-bottom">
+ <p>&copy; <span id="cy">2026</span> Padel Platz Kraljevo. Sva prava zadržana.</p>
+ </div>
+ </div>
+</footer>
+
+<!-- ==================== MOBILE MENU ==================== -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" aria-label="Zatvori">&times;</button>
+  <a href="index.html">🏠 Početna</a>
+  <a href="galerija.html">📸 Galerija</a>
+  <a href="cenovnik.html">💰 Cenovnik</a>
+  <a href="pravila.html">📋 Pravila</a>
+  <a href="rezervacija.html">📅 Rezervacija</a>
+  <a href="shop.html">🛒 Prodavnica</a>
+  <a href="turniri.html">🏆 Turniri</a>
+  <a href="kontakt.html">📞 Kontakt</a>
+  <div class="mobile-lang-section">
+  <div class="mobile-lang-label">Jezik / Language</div>
+  <button class="mobile-lang-btn" data-lang="sr">🇷🇸</button>
+  <button class="mobile-lang-btn" data-lang="en">🇬🇧</button>
+  <button class="mobile-lang-btn" data-lang="hr">🇭🇷</button>
+  <button class="mobile-lang-btn" data-lang="es">🇪🇸</button>
+  <button class="mobile-lang-btn" data-lang="de">🇩🇪</button>
+  </div>
+  <a href="rezervacija.html" class="mm-btn">✅ Rezerviši Termin</a>
+</div>
+
+<script src="main.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function(){
+   document.querySelectorAll('.year-js').forEach(function(el){
+    el.textContent = new Date().getFullYear();
+   });
+  });
+</script>
+</body>
+</html>

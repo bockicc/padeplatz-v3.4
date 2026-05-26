@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta name="description" content="O Padel Platz Kraljevo — prvi padel centar u gradu, 3 terena, vrhunska oprema, besplatan parking.">
+ <meta property="og:title" content="O Nama - Padel Platz Kraljevo">
+ <meta property="og:description" content="3 otvorena padel terena • Vrhunska oprema • Besplatan parking">
+ <title>O Nama - Padel Platz Kraljevo</title>
+ <link rel="stylesheet" href="style.css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+ <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+</head>
+<body>
+
+<nav class="navbar">
+ <div class="nav-wrap">
+<a href="index.html" class="logo">PADEL <span>PLATZ</span></a>
+<ul class="nav-links">
+ <li><a href="index.html">Početna</a></li>
+ <li><a href="galerija.html">Galerija</a></li>
+ <li><a href="cenovnik.html">Cenovnik</a></li>
+ <li><a href="pravila.html">Pravila</a></li>
+ <li><a href="rezervacija.html">Rezervacija</a></li>
+ <li><a href="shop.html">Prodavnica</a></li>
+ <li><a href="kontakt.html">Kontakt</a></li>
+ </ul>
+<div class="nav-right">
+  <a href="rezervacija.html" class="btn-nav" data-i18n="nav.bookNav"><i class="fas fa-calendar-check"></i> Rezerviši Termin</a>
+  <div class="cart-icon-container" onclick="toggleCart()">
+    <i class="fas fa-shopping-cart"></i>
+    <span id="cart-count">0</span>
+  </div>
+  <div class="lang-dropdown">
+  <button class="lang-toggle" aria-label="Select language" aria-expanded="false">
+    <i class="fas fa-globe"></i>
+    <span>Lng</span>
+    <i class="fas fa-chevron-down lang-chevron"></i>
+  </button>
+  <div class="lang-menu" hidden>
+    <button class="lang-option active" data-lang="sr">
+      <span class="lang-abbr">RS</span>
+      <span class="lang-flag"><img src="images/flags/rs.webp" alt="RS"></span>
+      <span class="lang-name">Srpski</span>
+    </button>
+    <button class="lang-option" data-lang="en">
+      <span class="lang-abbr">GB</span>
+      <span class="lang-flag"><img src="images/flags/gb.webp" alt="GB"></span>
+      <span class="lang-name">English</span>
+    </button>
+    <button class="lang-option" data-lang="hr">
+      <span class="lang-abbr">HR</span>
+      <span class="lang-flag"><img src="images/flags/hr.webp" alt="HR"></span>
+      <span class="lang-name">Hrvatski</span>
+    </button>
+    <button class="lang-option" data-lang="es">
+      <span class="lang-abbr">ES</span>
+      <span class="lang-flag"><img src="images/flags/es.webp" alt="ES"></span>
+      <span class="lang-name">Español</span>
+    </button>
+    <button class="lang-option" data-lang="de">
+      <span class="lang-abbr">DE</span>
+      <span class="lang-flag"><img src="images/flags/de.webp" alt="DE"></span>
+      <span class="lang-name">Deutsch</span>
+    </button>
+  </div>
+</div>
+ <button class="hamburger" id="hamburger-btn" aria-label="Menu"><i class="fas fa-bars"></i></button>
+ </div>
+ </div>
+</nav>
+
+<section class="about-section">
+ <div class="container">
+ <h2 class="st" data-i18n="about.title">O Nama</h2>
+ <p class="ss" data-i18n="about.sub">Upoznajte prvi padel centar u Kraljevu</p>
+ <div class="about-grid">
+ <div class="about-text">
+ <h3 data-i18n="about.mission">Dobrodošli u Padel Platz</h3>
+ <p data-i18n="about.t1">Padel Platz je osnovan sa željom da donese ovaj brzo rastući sport u naš grad na najviši mogući nivo.</p>
+ <p data-i18n="about.t2">Imamo 3 profesionalna otvorena terena sa vrhunskom oblogom, profesionalnom opremom i odličnim rasvetljenjem koje omogućava igru tokom celokupnog dana i noći.</p>
+ <p data-i18n="about.t3">Nakon svake igre, možete uživati u besplatan osvežavajući — jer je vaše udobnost naš prioritet. Takođe nudimo besplatan parking za sve posetioce.</p>
+ <div class="about-highlight">
+ <strong data-i18n="about.mission">Naša misija:</strong><span data-i18n="about.mText">Želimo da padel postane deo svakodnevnog života našeg grada. Pridružite nam se i isprobajte razliku!</span>
+ </div>
+ <a href="rezervacija.html" class="btn-b" style="margin-top:20px;" data-i18n="about.cta"><i class="fas fa-calendar-check"></i> Rezerviši Termin</a>
+ </div>
+ <div class="about-img card">
+ <img src="images/gallery_court4.webp" alt="Padel Platz Kraljevo — teren">
+ </div>
+ </div>
+ </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+  <div class="footer-grid">
+  <div class="fb">
+  <a href="index.html" class="logo">PADEL <span>PLATZ</span></a>
+  <p data-i18n="footer.about">Prvi padel centar u Kraljevu — vaše padel iskustvo na prvom mestu.</p>
+  <div class="social-links">
+  <a href="https://www.facebook.com/people/Padel-Platz/61575166736911" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+  <a href="https://www.instagram.com/padelplatz/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+  <a href="https://www.tiktok.com/@padel.platz" target="_blank" rel="noopener" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+  </div>
+  </div>
+  <div>
+  <h4 data-i18n="footer.links">Prečice</h4>
+   <ul class="footer-links">
+   <li><a href="index.html" data-i18n="nav.home">Početna</a></li>
+   <li><a href="galerija.html" data-i18n="nav.gallery">Galerija</a></li>
+   <li><a href="cenovnik.html" data-i18n="nav.pricing">Cenovnik</a></li>
+   <li><a href="pravila.html" data-i18n="nav.rules">Pravila</a></li>
+   <li><a href="rezervacija.html" data-i18n="nav.booking">Rezervacija</a></li>
+   <li><a href="shop.html" data-i18n="nav.shop">Prodavnica</a></li>
+   <li><a href="kontakt.html" data-i18n="nav.contact">Kontakt</a></li>
+   </ul>
+   </div>
+   <div>
+   <h4 data-i18n="footer.hours">Radno Vreme</h4>
+   <ul class="footer-links">
+   <li><a href="#"><span data-i18n="footer.monFri">Pon - Pet: 08:00 - 24:00</span></a></li>
+   <li><a href="#"><span data-i18n="footer.sat">Subota: 09:00 - 22:00</span></a></li>
+   <li><a href="#"><span data-i18n="footer.sun">Nedelja: 10:00 - 20:00</span></a></li>
+   </ul>
+   </div>
+   <div>
+   <h4 data-i18n="footer.contactTitle">Kontakt</h4>
+   <ul class="footer-links">
+   <li><a href="tel:+381668123647">📞 +381 66 8123 647</a></li>
+   <li><a href="mailto:info@padelplatz.rs">✉ info@padelplatz.rs</a></li>
+   <li><a href="https://www.google.com/maps/@43.7214157,20.6823418,591m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI2MDUwNi4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener" style="color:var(--primary)">📍 Milomira Glavčića 18</a></li>
+    </ul>
+    </div>
+   </div>
+   <div class="footer-bottom">
+  <p>&copy; <span id="cy">2026</span> Padel Platz Kraljevo. Sva prava zadržana.</p>
+   </div>
+  </div>
+</footer>
+
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" aria-label="Zatvori">&times;</button>
+  <a href="index.html">🏠 Početna</a>
+  <a href="galerija.html">📸 Galerija</a>
+  <a href="cenovnik.html">💰 Cenovnik</a>
+  <a href="pravila.html">📋 Pravila</a>
+  <a href="rezervacija.html">📅 Rezervacija</a>
+  <a href="shop.html">🛒 Prodavnica</a>
+  <a href="kontakt.html">📞 Kontakt</a>
+  <div class="mobile-lang-section">
+  <div class="mobile-lang-label">Jezik / Language</div>
+  <button class="mobile-lang-btn" data-lang="sr">🇷🇸</button>
+  <button class="mobile-lang-btn" data-lang="en">🇬🇧</button>
+  <button class="mobile-lang-btn" data-lang="hr">🇭🇷</button>
+  <button class="mobile-lang-btn" data-lang="es">🇪🇸</button>
+  <button class="mobile-lang-btn" data-lang="de">🇩🇪</button>
+  </div>
+  <a href="rezervacija.html" class="mm-btn">✅ Rezerviši Termin</a>
+</div>
+
+<script src="translations.js"></script>
+<script src="i18n.js"></script>
+<script src="main.js"></script>
+<script src="cart.js"></script>
+</body>
+</html>
+
+
+
+
+
+

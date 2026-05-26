@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta name="description" content="Padel Platz Kraljevo — Prvi padel centar u Kraljevu. 3 otvorena terena, vrhunska oprema, besplatan parking.">
+ <meta property="og:title" content="Padel Platz Kraljevo">
+ <meta property="og:description" content="3 otvorena padel terena • Vrhunska oprema • Besplatan parking">
+ <title>Padel Platz Kraljevo</title>
+ <link rel="stylesheet" href="style.css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+ <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+</head>
+<body>
+
+<nav class="navbar">
+<div class="nav-wrap">
+ <a href="index.html" class="logo">PADEL <span>PLATZ</span></a>
+<ul class="nav-links">
+ <li><a href="index.html">Početna</a></li>
+ <li><a href="galerija.html">Galerija</a></li>
+ <li><a href="cenovnik.html">Cenovnik</a></li>
+ <li><a href="pravila.html">Pravila</a></li>
+ <li><a href="rezervacija.html">Rezervacija</a></li>
+ <li><a href="shop.html">Prodavnica</a></li>
+ <li><a href="kontakt.html">Kontakt</a></li>
+ </ul>
+  <div class="nav-right">
+  <a href="rezervacija.html" class="btn-nav" data-i18n="nav.bookNav"><i class="fas fa-calendar-check"></i> Rezerviši Termin</a>
+  <div class="cart-icon-container" onclick="toggleCart()">
+    <i class="fas fa-shopping-cart"></i>
+    <span id="cart-count">0</span>
+  </div>
+  <div class="lang-dropdown">
+  <button class="lang-toggle" aria-label="Select language" aria-expanded="false">
+    <i class="fas fa-globe"></i>
+    <span>Lng</span>
+    <i class="fas fa-chevron-down lang-chevron"></i>
+  </button>
+  <div class="lang-menu" hidden>
+    <button class="lang-option active" data-lang="sr">
+      <span class="lang-abbr">RS</span>
+      <span class="lang-flag"><img src="images/flags/rs.webp" alt="RS"></span>
+      <span class="lang-name">Srpski</span>
+    </button>
+    <button class="lang-option" data-lang="en">
+      <span class="lang-abbr">GB</span>
+      <span class="lang-flag"><img src="images/flags/gb.webp" alt="GB"></span>
+      <span class="lang-name">English</span>
+    </button>
+    <button class="lang-option" data-lang="hr">
+      <span class="lang-abbr">HR</span>
+      <span class="lang-flag"><img src="images/flags/hr.webp" alt="HR"></span>
+      <span class="lang-name">Hrvatski</span>
+    </button>
+    <button class="lang-option" data-lang="es">
+      <span class="lang-abbr">ES</span>
+      <span class="lang-flag"><img src="images/flags/es.webp" alt="ES"></span>
+      <span class="lang-name">Español</span>
+    </button>
+    <button class="lang-option" data-lang="de">
+      <span class="lang-abbr">DE</span>
+      <span class="lang-flag"><img src="images/flags/de.webp" alt="DE"></span>
+      <span class="lang-name">Deutsch</span>
+    </button>
+  </div>
+</div>
+ <button class="hamburger" id="hamburger-btn" aria-label="Menu"><i class="fas fa-bars"></i></button>
+ </div>
+ </div>
+</nav>
+
+<!-- ==================== HERO ==================== -->
+<section class="hero">
+ <img src="images/padel-hero.jfif" alt="Padel Platz Kraljevo" class="hero-bg">
+ <div class="hero-overlay"></div>
+ <div class="hero-content">
+ <p class="hero-badge" data-i18n="hero.badge">⬤ PRVI PADEL CENTAR U KRALJEVU</p>
+ <h1 data-i18n-html="hero.title">PADEL IGRA<br><span class="highlight" data-i18n="hero.title">NA NAJVIŠEM NIVOU</span></h1>
+ <p class="hero-desc" data-i18n="hero.desc">3 profesionalna terena • Vrhunska oprema • Besplatan parking • Odlično rasvetljenje</p>
+ <a href="rezervacija.html" class="btn-h" data-i18n="hero.cta"><i class="fas fa-calendar"></i> Rezerviši Termin</a>
+ </div>
+</section>
+
+<!-- ==================== O NAMA NA INDEXU ==================== -->
+<section class="about-section">
+ <div class="container">
+ <h2 class="st" data-i18n="about.title">O Nama</h2>
+ <p class="ss" data-i18n="about.sub">Upoznajte prvi padel centar u Kraljevu</p>
+ <div class="about-grid">
+ <div class="about-text">
+ <h3 data-i18n="about.mission">Dobrodošli u Padel Platz</h3>
+ <p data-i18n="about.t1">Padel Platz je osnovan sa željom da donese ovaj brzo rastući sport u naš grad na najviši mogući nivo.</p>
+ <p data-i18n="about.t2">Imamo 3 profesionalna otvorena terena sa vrhunskom oblogom, profesionalnom opremom i odličnim rasvetljenjem koje omogućava igru tokom celokupnog dana i noći.</p>
+ <p data-i18n="about.t3">Nakon svake igre, možete uživati u besplatan osvežavajući — jer je vaše udobnost naš prioritet. Takođe nudimo besplatan parking za sve posetioce.</p>
+ <div class="about-highlight">
+ <strong data-i18n="about.mission">Naša misija:</strong><span data-i18n="about.mText">Želimo da padel postane deo svakodnevnog života našeg grada. Pridružite nam se i isprobajte razliku!</span>
+ </div>
+ <a href="rezervacija.html" class="btn-b" style="margin-top:20px;" data-i18n="about.cta"><i class="fas fa-calendar-check"></i> Rezerviši Termin</a>
+ </div>
+ <div class="about-img card">
+ <img src="images/gallery_court4.webp" alt="Padel Platz Kraljevo — teren">
+ </div>
+ </div>
+ </div>
+</section>
+
+<!-- ==================== OSLVETLJENJE SECTION ==================== -->
+<section class="info-section osv">
+ <div class="container">
+ <h2 class="st st-w" data-i18n="lighting.title">Noćno Osvetljenje</h2>
+ <p class="ss ss-w" data-i18n="lighting.subtitle">Profesionalni LED reflektori omogućavaju savršenu igru danju i noću.</p>
+ <div class="info-grid">
+ <div class="info-visual">
+ <svg class="info-icon-svg" viewBox="0 0 200 220" xmlns="http://www.w3.org/2000/svg">
+ <rect x="88" y="192" width="24" height="18" rx="3" fill="#555"/>
+ <rect x="90" y="182" width="20" height="14" rx="2" fill="#666"/>
+ <rect x="96" y="75" width="8" height="110" rx="4" fill="#444"/>
+ <ellipse cx="100" cy="65" rx="48" ry="28" fill="#2a2a2a" stroke="#555" stroke-width="1.5"/>
+ <polygon points="52,65 10,25 10,105" fill="rgba(232,184,75,0.15)" stroke="rgba(232,184,75,0.25)" stroke-width="1"/>
+ <polygon points="148,65 190,25 190,105" fill="rgba(232,184,75,0.15)" stroke="rgba(232,184,75,0.25)" stroke-width="1"/>
+ <polygon points="58,70 25,115 25,185 65,160" fill="rgba(232,184,75,0.1)" stroke="rgba(232,184,75,0.2)" stroke-width="1"/>
+ <polygon points="142,70 175,115 175,185 135,160" fill="rgba(232,184,75,0.1)" stroke="rgba(232,184,75,0.2)" stroke-width="1"/>
+ <ellipse cx="100" cy="65" rx="30" ry="18" fill="none" stroke="rgba(232,184,75,0.5)" stroke-width="1.5"/>
+ <ellipse cx="100" cy="65" rx="16" ry="9" fill="rgba(255,245,220,0.85)"/>
+ <circle cx="100" cy="65" r="55" fill="none" stroke="rgba(232,184,75,0.06)" stroke-width="30"/>
+ <circle cx="76" cy="50" r="2.5" fill="#777"/>
+ <circle cx="124" cy="50" r="2.5" fill="#777"/>
+ <circle cx="76" cy="80" r="2.5" fill="#777"/>
+ <circle cx="124" cy="80" r="2.5" fill="#777"/>
+ <circle cx="35" cy="25" r="2" fill="#E8B84B" opacity="0.25"/>
+ <circle cx="165" cy="30" r="2" fill="#E8B84B" opacity="0.25"/>
+ <circle cx="25" cy="95" r="1.5" fill="#E8B84B" opacity="0.18"/>
+ <circle cx="175" cy="100" r="1.5" fill="#E8B84B" opacity="0.18"/>
+ </svg>
+ </div>
+ <div class="info-text" style="padding-left:20px;">
+ <span class="info-tag">LED OSVETLJENJE 24/7</span>
+ <h2 style="color:var(--white);">Noćna Igra Na Najvišem Nivou</h2>
+ <p style="color:rgba(255,255,255,0.85);">Naša profesionalna LED rasvetljenja omogućavaju savršenu vidljivost tokom svake igre — danju i noću. Prilagodljiva intenzivnost i energetska efikasnost.</p>
+ <ul class="info-features">
+ <li><i class="fas fa-check" style="color:var(--primary)"></i> Profesionalni LED reflektori</li>
+ <li><i class="fas fa-check" style="color:var(--primary)"></i> Ravnomerno rasvetljenje bez suzenja</li>
+ <li><i class="fas fa-check" style="color:var(--primary)"></i> Prilagodljiva intenzivnost</li>
+ <li><i class="fas fa-check" style="color:var(--primary)"></i> Energofikasno i ekološki</li>
+ </ul>
+ </div>
+ </div>
+ </div>
+</section>
+
+<!-- ==================== ZAŠTO PADEL PLATZ ==================== -->
+<section class="features-section">
+ <div class="container">
+ <h2 class="st" data-i18n="features.title">Zašto Padel Platz?</h2>
+ <p class="ss" data-i18n="features.desc">Tri razloga zašto je Padel Platz pravi izbor za vaše padel iskustvo</p>
+ <div class="features-grid" style="grid-template-columns:repeat(3,1fr);">
+ <div class="feature-card fc2">
+ <div class="fi"><i class="fas fa-car"></i></div>
+ <h3 data-i18n="features.parking">Besplatan Parking</h3>
+ <p data-i18n="features.parkingDesc">Zabrana prevoznog stresa — parkirajte pored termina besplatno, ugodno i bez čekanja.</p>
+ </div>
+ <div class="feature-card fc1">
+ <div class="fi"><i class="fas fa-tint"></i></div>
+ <h3 data-i18n="features.drinks">Uključen Osvežavajući</h3>
+ <p data-i18n="features.drinksDesc">Topla i hladna pića dostupna posle svake igre — cijeli dan, bez dodatnih troškova.</p>
+ </div>
+ <div class="feature-card fc3">
+ <div class="fi"><i class="fas fa-trophy"></i></div>
+ <h3 data-i18n="features.tourn">Redovni Turniri</h3>
+ <p data-i18n="features.tournDesc">Mesečni turniri i Grand Prix sezona za igrače svih nivoa — prijavite se i osvojite trofej!</p>
+ </div>
+ </div>
+ </div>
+</section>
+
+<!-- ==================== KLUPSKA TAKMIČENJA ==================== -->
+<section class="tak-section">
+ <div class="container">
+ <div class="tak-header">
+ <h2 class="st" data-i18n="tournaments.title">Turniri & Rang liste</h2>
+ <p class="ss" data-i18n="tournaments.desc">Pratite najnovije vesti vezano za turnire i rang liste</p>
+ </div>
+ <div class="tak-grid">
+ <div class="tak-card">
+ <div class="tak-icon">
+ <svg viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+ <path d="M14 3 L18 12 L16 14 L14 11 L12 14 L10 12 Z" fill="#D4382B"/>
+ <rect x="7" y="14" width="14" height="8" rx="2" fill="#E8B84B"/>
+ <rect x="9" y="21" width="10" height="3" rx="1.5" fill="#C49635"/>
+ </svg>
+ </div>
+ <div class="tak-step" data-i18n="tournaments.card1.step">1 / 2</div>
+ <h3 data-i18n="tournaments.card1.title">Aktuelni Turniri</h3>
+ <p data-i18n="tournaments.card1.desc">Saznajte sve o predstojećim i humanitarnim turnirima, rasporedu mečeva i kotizacijama. Prijavite svoju ekipu na vreme.</p>
+ <div class="tak-meta">
+ <span><i class="fas fa-calendar"></i><span data-i18n="tournaments.card1.meta1">Novi turniri svakog meseca</span></span>
+ <span><i class="fas fa-flag-checkered"></i><span data-i18n="tournaments.card1.meta2">Kvalitetna organizacija</span></span>
+ </div>
+ <a href="turniri.html" class="tak-link" data-i18n="tournaments.card1.link">Prijavi se <i class="fas fa-arrow-right"></i></a>
+ </div>
+
+ <div class="tak-card">
+ <div class="tak-icon tak-icon-2">
+ <svg viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+ <rect x="4" y="19" width="20" height="3" rx="3" fill="#D4382B"/>
+ <rect x="6" y="12" width="16" height="9" rx="2" fill="#333"/>
+ <text x="14" y="19" text-anchor="middle" font-size="9" font-weight="900" fill="#E8B84B" font-family="Arial, sans-serif">GP</text>
+ </svg>
+ </div>
+ <div class="tak-step" data-i18n="tournaments.card2.step">2 / 2</div>
+ <h3 data-i18n="tournaments.card2.title">Lestvica &amp; Rang Lista</h3>
+ <p data-i18n="tournaments.card2.desc">Pratite živi plasman najboljih parova u klubu. Izazovite ekipe ispred vas, beležite pobede i napredujte na tabeli.</p>
+ <div class="tak-meta">
+ <span><i class="fas fa-chart-line"></i><span data-i18n="tournaments.card2.meta1">Ažurna rang lista</span></span>
+ <span><i class="fas fa-crown"></i><span data-i18n="tournaments.card2.meta2">Prva tri mesta sa nagradama</span></span>
+ </div>
+ <a href="rang-lista.html" class="tak-link" data-i18n="tournaments.card2.link">Pogledaj <i class="fas fa-arrow-right"></i></a>
+ </div>
+ </div>
+ </div>
+</section>
+
+<!-- ==================== ČESTA PITANJA (FAQ) ==================== -->
+<section class="faq-section">
+ <div class="container">
+ <h2 class="st" data-i18n="faq.title">Česta Pitanja</h2>
+ <p class="ss" data-i18n="faq.desc">Pronađite odgovore na najčešća pitanja o padel igri, rezervaciji, cenovniku i našoj oprema.</p>
+ <div class="faq-container">
+
+ <div class="faq-item active">
+ <button class="faq-question" aria-expanded="true">
+ <span data-i18n="faq.q1">Kako da rezervišem teren za padel?</span>
+ <i class="fas fa-chevron-down"></i>
+ </button>
+ <div class="faq-answer">
+ <p data-i18n="faq.a1">Rezervacija terena je jednostavna! Pozovite nas na broj <strong>+381 66 8123 647</strong> ili pošaljite poruku putem našeg sistema za rezervaciju na sajtu. Takođe možete doći osobno na lokaciju i rezervisati termin direktno kod nas. Preporučujemo rezervaciju najmanje 24 sata unnapred, posebno za večernje termine i vikend.</p>
+ </div>
+ </div>
+
+ <div class="faq-item">
+ <button class="faq-question" aria-expanded="false">
+ <span data-i18n="faq.q2">Da li je oprema za padel dostupna na mestu?</span>
+ <i class="fas fa-chevron-down"></i>
+ </button>
+ <div class="faq-answer">
+ <p data-i18n="faq.a2">Da! Naš centar nudi potpunu opremu za iznajmljivanje — palaćke, lopta i pristup terenima. Imamo visokokvalitetnu opremu dostupnu za sve naše goste. Ako imate sopstvenu opremu, slobodno je koristite. Detaljnije informacije o opremi možete naći u našem cenovniku.</p>
+ </div>
+ </div>
+
+ <div class="faq-item">
+ <button class="faq-question" aria-expanded="false">
+ <span data-i18n="faq.q3">Da li postoji članstvo ili programska članstva?</span>
+ <i class="fas fa-chevron-down"></i>
+ </button>
+ <div class="faq-answer">
+ <p data-i18n="faq.a3">Da, nudimo različite nivo članstva prilagođena vašim potrebama — od mesečnog do godišnjeg članstva sa posebnim popustima na termine i dodatnim pogodnostima. Posetite nas ili nas kontaktirajte za detaljne informacije o aktuelnim ponudama članstava.</p>
+ </div>
+ </div>
+
+ <div class="faq-item">
+ <button class="faq-question" aria-expanded="false">
+ <span data-i18n="faq.q4">Koja je radna vremena Padel Platz-a?</span>
+ <i class="fas fa-chevron-down"></i>
+ </button>
+ <div class="faq-answer">
+ <p data-i18n="faq.a4">Naš radni sati je sledeći:</p>
+ <ul>
+ <li><strong>Ponedeljak – Petak:</strong> 08:00 – 24:00</li>
+ <li><strong>Subota:</strong> 09:00 – 22:00</li>
+ <li><strong>Nedelja:</strong> 10:00 – 20:00</li>
+ </ul>
+ <p>Termini su dostupni tokom celokupnog radnog vremena. Rezervišite termin zainteresuje vas igra van navedenog radnog vremena.</p>
+ </div>
+ </div>
+
+ <div class="faq-item">
+ <button class="faq-question" aria-expanded="false">
+ <span data-i18n="faq.q5">Da li je padel za početnike?</span>
+ <i class="fas fa-chevron-down"></i>
+ </button>
+ <div class="faq-answer">
+ <p data-i18n="faq.a5">Apsolutno! Padel je sport koji je lako naučiti i idealan za početnike. Mi nudimo uvodne termine i pratenu obuku za sve koji žele da počnu. Naši tereni su prilagođeni igračima svih nivoa — od potpunih početnika do zahtevnih igrača. Samo dođite i uživajte!</p>
+ </div>
+ </div>
+
+ <div class="faq-item">
+ <button class="faq-question" aria-expanded="false">
+ <span data-i18n="faq.q6">Koliko koštaju termini i usluge?</span>
+ <i class="fas fa-chevron-down"></i>
+ </button>
+<div class="faq-answer">
+  <p data-i18n="faq.a6">Cenovnik je sledeći:</p>
+  <ul>
+  <li><strong>Radni dan (08:00–16:00):</strong> <span data-price-rsd="1200" data-price-type="weekday">1.200 RSD</span>/h</li>
+  <li><strong>Večernji termini i vikend:</strong> <span data-price-rsd="1500" data-price-type="evwe">1.500 RSD</span>/h</li>
+  <li><strong>Grupni termini (od 4 igrača):</strong> <span data-price-rsd="3400" data-price-type="group">3.400 RSD</span>/h</li>
+  </ul>
+  <p>Popusti se primenjuju za članove kluba i prijavljene turnire. Za detaljnije informacije pogledajte naš <a href="cenovnik.html">cenovnik</a>.</p>
+  </div>
+ </div>
+
+ <div class="faq-item">
+ <button class="faq-question" aria-expanded="false">
+ <span data-i18n="faq.q7">Gde se nalazi Padel Platz Kraljevo?</span>
+ <i class="fas fa-chevron-down"></i>
+ </button>
+ <div class="faq-answer">
+ <p data-i18n="faq.a7">Padel Platz se nalazi na adresi <strong>Milomira Glavčića 18, Kraljevo</strong>. Lokacija je lako dostupna automobilom i javnim prevozom. Za detaljnu mapu pogledajte našu <a href="kontakt.html">stranicu sa kartom</a>.</p>
+ </div>
+ </div>
+
+ <div class="faq-item">
+ <button class="faq-question" aria-expanded="false">
+ <span data-i18n="faq.q8">Da li nudite obuku i trening?</span>
+ <i class="fas fa-chevron-down"></i>
+ </button>
+ <div class="faq-answer">
+ <p data-i18n="faq.a8">Da! Nudimo individualne i grupne obuke sa iskusnim trenerima. Takođe redovno organizujemo radione za početnike i napredne igrače. Kontaktirajte nas za raspored i cene obuke.</p>
+ </div>
+ </div>
+
+ </div>
+ </div>
+</section>
+
+<!-- ==================== CTA ==================== -->
+<section class="cta-section">
+ <div class="container">
+ <h2 data-i18n="cta.title">Spremni za Igru?</h2>
+ <p data-i18n="cta.desc">Rezervišite svoj termin danas i otkrijte zašto su hiljade ljudi iz Kraljeva izabralo Padel Platz.</p>
+ <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-top:28px;">
+ <a href="rezervacija.html" class="btn-h" data-i18n="hero.cta"><i class="fas fa-calendar-check"></i> Rezerviši Termin</a>
+ <a href="kontakt.html" class="btn-w" data-i18n="cta.cBtn"><i class="fas fa-phone"></i> Pozovite Nas</a>
+ </div>
+ </div>
+</section>
+
+<!-- ==================== FOOTER ==================== -->
+<footer class="footer">
+ <div class="container">
+ <div class="footer-grid">
+ <div class="fb">
+ <a href="index.html" class="logo">PADEL <span>PLATZ</span></a>
+ <p data-i18n="footer.about">Prvi padel centar u Kraljevu — vaše padel iskustvo na prvom mestu.</p>
+ <div class="social-links">
+ <a href="https://www.facebook.com/people/Padel-Platz/61575166736911" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+ <a href="https://www.instagram.com/padelplatz/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+ <a href="https://www.tiktok.com/@padel.platz" target="_blank" rel="noopener" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+ </div>
+ </div>
+ <div>
+ <h4 data-i18n="footer.links">Prečice</h4>
+  <ul class="footer-links">
+  <li><a href="index.html" data-i18n="nav.home">Početna</a></li>
+  <li><a href="galerija.html" data-i18n="nav.gallery">Galerija</a></li>
+  <li><a href="cenovnik.html" data-i18n="nav.pricing">Cenovnik</a></li>
+  <li><a href="pravila.html" data-i18n="nav.rules">Pravila</a></li>
+  <li><a href="rezervacija.html" data-i18n="nav.booking">Rezervacija</a></li>
+  <li><a href="shop.html" data-i18n="nav.shop">Prodavnica</a></li>
+  <li><a href="kontakt.html" data-i18n="nav.contact">Kontakt</a></li>
+  </ul>
+  </div>
+  <div>
+  <h4 data-i18n="footer.hours">Radno Vreme</h4>
+  <ul class="footer-links">
+  <li><a href="#"><span data-i18n="footer.monFri">Pon - Pet: 08:00 - 24:00</span></a></li>
+  <li><a href="#"><span data-i18n="footer.sat">Subota: 09:00 - 22:00</span></a></li>
+  <li><a href="#"><span data-i18n="footer.sun">Nedelja: 10:00 - 20:00</span></a></li>
+  </ul>
+  </div>
+  <div>
+  <h4 data-i18n="footer.contactTitle">Kontakt</h4>
+  <ul class="footer-links">
+  <li><a href="tel:+381668123647">📞 +381 66 8123 647</a></li>
+  <li><a href="mailto:info@padelplatz.rs">✉ info@padelplatz.rs</a></li>
+  <li><a href="https://www.google.com/maps/@43.7214157,20.6823418,591m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI2MDUwNi4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener" style="color:var(--primary)">📍 Milomira Glavčića 18</a></li>
+   </ul>
+   </div>
+  </div>
+  <div class="footer-bottom">
+ <p>&copy; <span id="cy">2026</span> Padel Platz Kraljevo. Sva prava zadržana.</p>
+ </div>
+ </div>
+</footer>
+
+<div class="mobile-menu" id="mobileMenu">
+ <button class="mobile-close" aria-label="Zatvori">&times;</button>
+<a href="index.html">🏠 Početna</a>
+ <a href="galerija.html">📸 Galerija</a>
+ <a href="cenovnik.html">💰 Cenovnik</a>
+ <a href="pravila.html">📋 Pravila</a>
+ <a href="rezervacija.html">📅 Rezervacija</a>
+ <a href="shop.html">🛒 Prodavnica</a>
+ <a href="kontakt.html">📞 Kontakt</a>
+ <div class="mobile-lang-section">
+ <div class="mobile-lang-label">Jezik / Language</div>
+<button class="mobile-lang-btn" data-lang="sr">🇷🇸</button>
+ <button class="mobile-lang-btn" data-lang="en">🇬🇧</button>
+ <button class="mobile-lang-btn" data-lang="hr">🇭🇷</button>
+ <button class="mobile-lang-btn" data-lang="es">🇪🇸</button>
+ <button class="mobile-lang-btn" data-lang="de">🇩🇪</button>
+ </div>
+ <a href="rezervacija.html" class="mm-btn">✅ Rezerviši Termin</a>
+</div>
+
+<script src="main.js"></script>
+<script src="cart.js"></script>
+</body>
+</html>
+
+
+
+
+

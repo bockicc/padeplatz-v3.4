@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Pregled svih varijanti grid layout-a za Prodavnicu Padel Platz Kraljevo">
+  <title>Grid Varianti — Padel Platz</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <style>
+    /* demo page chrome */
+    body { background: var(--light, #f5ede3); }
+    .demo-chrome {
+      background: linear-gradient(135deg, #1e1310 0%, #111 100%);
+      color: #fff;
+      padding: 60px 20px 0;
+      text-align: center;
+    }
+    .demo-chrome h1 {
+      font-size: clamp(1.5rem, 4vw, 2.4rem);
+      font-weight: 900;
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+    }
+    .demo-chrome h1 span { color: var(--accent, #e8b84b); }
+    .demo-chrome p { color: rgba(255,255,255,.55); font-size: .95rem; max-width: 640px; margin: 0 auto 40px; }
+    .demo-nav {
+      position: sticky; top: 0; z-index: 100;
+      background: #1e1310;
+      border-bottom: 1px solid rgba(255,255,255,.08);
+      padding: 10px 20px;
+      display: flex; gap: 8px; flex-wrap: wrap; justify-content: center;
+    }
+    .demo-nav a {
+      color: rgba(255,255,255,.6);
+      font-size: .78rem;
+      font-weight: 600;
+      text-decoration: none;
+      padding: 5px 14px;
+      border-radius: 20px;
+      transition: background .2s, color .2s;
+    }
+    .demo-nav a:hover, .demo-nav a.active { background: var(--accent, #e8b84b); color: var(--surface, #1e1310); }
+    .demo-section { scroll-margin-top: 76px; padding: 56px 0; }
+    .demo-section + .demo-section { border-top: 1px solid rgba(0,0,0,.07); }
+    .demo-head { text-align: center; margin-bottom: 36px; }
+    .demo-head h2 { font-size: 1.55rem; font-weight: 900; color: var(--surface, #1e1310); }
+    .demo-head .blob {
+      display: inline-block; width: 10px; height: 10px;
+      border-radius: 50%; margin-right: 8px; vertical-align: middle;
+    }
+    .demo-head .desc { font-size: .9rem; color: #777; margin-top: 6px; }
+    .demo-chip {
+      font-size: .72rem; font-weight: 700; letter-spacing: .5px;
+      padding: 3px 10px; border-radius: 20px;
+      background: rgba(0,0,0,.06); color: var(--surface, #1e1310);
+      vertical-align: middle; margin-left: 8px;
+    }
+    .container { max-width: 1440px; margin: 0 auto; padding: 0 20px; }
+
+
+  </style>
+</head>
+<body>
+
+<!-- ────────── CHROME ────────── -->
+<div class="demo-chrome">
+  <h1><span>GRID</span> VARIJANTE  <span style="font-size:.55em;letter-spacing:3px;color:rgba(255,255,255,.3);displavinline-block;vertical-align:middle;margin-left:12px;">PRODAVNICA — PADEL PLATZ</span></h1>
+  <p>Četiri različita kontejnera/grid layout-a za ponudu padel reketa. Promeni klasu na <code>#product-container</code>
+       da promeniš izgled cele stranice prodavnice.</p>
+</div>
+<nav class="demo-nav">
+  <a href="#v1"  class="active" onclick="activate(this)">01 Compact</a>
+  <a href="#v2"  onclick="activate(this)">02 Horizontal</a>
+  <a href="#v3"  onclick="activate(this)">03 Bento</a>
+  <a href="#v4"  onclick="activate(this)">04 Overlay</a>
+  <a href="shop.html" onclick="activate(this)">🏠 Prava prodavnica</a>
+</nav>
+
+<!-- ═══════════════════════════════════════════════
+     VARIANT 1 — COMPACT
+     ═══════════════════════════════════════════════ -->
+<section id="v1" class="demo-section">
+  <div class="container">
+    <div class="demo-head">
+      <h2>
+        <span class="blob" style="background:#D4382B"></span>Compact Grid
+        <span class="demo-chip">grid-compact · card-compact</span>
+      </h2>
+      <p class="desc">Kompaktna 5-kolona — idealno za kompaktnu ikonicu ili filter-view. Bez dugmeta, kartica sama je link.</p>
+    </div>
+
+    <div class="grid-compact">
+
+      <!-- card 1 -->
+      <a href="#" class="card-compact">
+        <div class="cc-img">
+          <img src="images/rackets/racket-prime-pro-1.webp" alt="Prime Pro">
+        </div>
+        <div class="cc-name">Prime Pro<br>Edition</div>
+        <div class="cc-price">39.900 RSD</div>
+      </a>
+
+      <!-- card 2 -->
+      <a href="#" class="card-compact">
+        <div class="cc-img">
+          <img src="images/rackets/rialto-pro-1.webp" alt="Rialto Pro">
+        </div>
+        <div class="cc-name">Rialto Pro<br>2.0</div>
+        <div class="cc-price">39.900 RSD</div>
+      </a>
+
+      <!-- card 3 -->
+      <a href="#" class="card-compact">
+        <div class="cc-img">
+          <img src="images/rackets/rialto-pro-light-1.webp" alt="Rialto Light">
+        </div>
+        <div class="cc-name">Rialto Pro<br>Light 2.0</div>
+        <div class="cc-price">34.900 RSD</div>
+      </a>
+
+      <!-- card 4 -->
+      <a href="#" class="card-compact">
+        <div class="cc-img">
+          <img src="images/rackets/prime-team-women-1.webp" alt="Prime Women">
+        </div>
+        <div class="cc-name">Prime Team<br>Women's</div>
+        <div class="cc-price">23.900 RSD</div>
+      </a>
+
+      <!-- card 5 -->
+      <a href="#" class="card-compact">
+        <div class="cc-img">
+          <img src="images/rackets/cobra-women-1.webp" alt="Cobra Women">
+        </div>
+        <div class="cc-name">Cobra<br>Women's</div>
+        <div class="cc-price">13.900 RSD</div>
+      </a>
+
+      <!-- card 6 -->
+      <a href="#" class="card-compact">
+        <div class="cc-img">
+          <img src="images/rackets/nova-pro-side-1.webp" alt="Nova Pro">
+        </div>
+        <div class="cc-name">Nova Pro<br>Edition</div>
+        <div class="cc-price">14.500 RSD</div>
+      </a>
+
+      <!-- card 7 -->
+      <a href="#" class="card-compact">
+        <div class="cc-img">
+          <img src="images/rackets/cobra-apex-1.webp" alt="Cobra Apex">
+        </div>
+        <div class="cc-name">Cobra Apex<br>Women's</div>
+        <div class="cc-price">15.000 RSD</div>
+      </a>
+
+    </div><!-- /grid-compact -->
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     VARIANT 2 — HORIZONTAL
+     ═══════════════════════════════════════════════ -->
+<section id="v2" class="demo-section">
+  <div class="container">
+    <div class="demo-head">
+      <h2>
+        <span class="blob" style="background:#7c3aed"></span>Horizontal Horseshoe
+        <span class="demo-chip">grid-horseshoe · card-horseshoe</span>
+      </h2>
+      <p class="desc">Jedan reket po redu — slika levo, opis desno. Hover: kartica pomeri se desno, slika uveća se.</p>
+    </div>
+
+    <div class="grid-horseshoe">
+
+      <!-- row 1 -->
+      <a href="#" class="card-horseshoe">
+        <div class="ch-img">
+          <img src="images/rackets/racket-prime-pro-1.webp" alt="Prime Pro">
+        </div>
+        <div class="ch-info">
+          <div class="ch-name">Prime Pro Edition</div>
+          <div class="ch-desc">Evolucija najprodavanijeg padel reketa na svetu. Produžena drška od 45,5 cm, novi "Dynamic Hex" profil rama i Axis Force stabilizator za superiornu stabilnost.</div>
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-top:4px;">
+            <span class="ch-price">39.900 RSD</span>
+            <span class="ch-btn">Pogledaj <i class="fas fa-arrow-right ch-arr"></i></span>
+          </div>
+        </div>
+      </a>
+
+      <!-- row 2 -->
+      <a href="#" class="card-horseshoe">
+        <div class="ch-img">
+          <img src="images/rackets/rialto-pro-1.webp" alt="Rialto Pro">
+        </div>
+        <div class="ch-info">
+          <div class="ch-name">Rialto Pro 2.0</div>
+          <div class="ch-desc">Najnovija generacija Rialto Pro modela — poboljšana upravljivost, proširen sweet spot i 12K karbonski okvir za maksimalnu kontrolu.</div>
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-top:4px;">
+            <span class="ch-price">39.900 RSD</span>
+            <span class="ch-btn">Pogledaj <i class="fas fa-arrow-right ch-arr"></i></span>
+          </div>
+        </div>
+      </a>
+
+      <!-- row 3 -->
+      <a href="#" class="card-horseshoe">
+        <div class="ch-img">
+          <img src="images/rackets/rialto-pro-light-1.webp" alt="Rialto Light">
+        </div>
+        <div class="ch-info">
+          <div class="ch-name">Rialto Pro Light 2.0</div>
+          <div class="ch-desc">Ista moć, manja težina. Idealna za igrače koji žele lakši reket bez kompromisa po pitanju snage i kontrolne površine.</div>
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-top:4px;">
+            <span class="ch-price">34.900 RSD</span>
+            <span class="ch-btn">Pogledaj <i class="fas fa-arrow-right ch-arr"></i></span>
+          </div>
+        </div>
+      </a>
+
+    </div><!-- /grid-horseshoe -->
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     VARIANT 3 — BENTO / EDITORIAL
+     ═══════════════════════════════════════════════ -->
+<section id="v3" class="demo-section">
+  <div class="container">
+    <div class="demo-head">
+      <h2>
+        <span class="blob" style="background:#6366f1"></span>Bento Editorial
+        <span class="demo-chip">grid-prestige · card-prestige</span>
+      </h2>
+      <p class="desc">Premium bento raspored: 2 velika + 2 mala karte po redu. Premium feel, struktura podaci.</p>
+    </div>
+
+    <div class="grid-prestige">
+
+      <!-- ── big card: 1/3 posle ── -->
+      <a href="#" class="card-prestige cp-big">
+        <div class="cp-img">
+          <img src="images/rackets/racket-prime-pro-1.webp" alt="Prime Pro">
+        </div>
+        <div class="cp-body">
+          <div class="cp-name">Prime Pro Edition</div>
+          <div class="cp-stats">
+            <span class="cp-stat">363 g</span>
+            <span class="cp-stat">Karbon 80/20</span>
+            <span class="cp-stat">38 mm</span>
+            <span class="cp-stat">45.5 cm drška</span>
+          </div>
+          <div class="cp-price">39.900 RSD</div>
+        </div>
+      </a>
+
+      <!-- ── small card: 1/3 ── -->
+      <a href="#" class="card-prestige cp-small">
+        <div class="cp-img">
+          <img src="images/rackets/rialto-pro-light-1.webp" alt="Rialto Light">
+        </div>
+        <div class="cp-body">
+          <div class="cp-name">Rialto Pro Light 2.0</div>
+          <div class="cp-stats">
+            <span class="cp-stat">Manja težina</span>
+            <span class="cp-stat">34.900 RSD</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- ── small card: 1/3 ── -->
+      <a href="#" class="card-prestige cp-small">
+        <div class="cp-img">
+          <img src="images/rackets/cobra-women-1.webp" alt="Cobra Women">
+        </div>
+        <div class="cp-body">
+          <div class="cp-name">Cobra Women's</div>
+          <div class="cp-stats">
+            <span class="cp-stat">Najlakši</span>
+            <span class="cp-stat">13.900 RSD</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- ── big card: last in row — ── -->
+      <a href="#" class="card-prestige cp-big">
+        <div class="cp-img">
+          <img src="images/rackets/nova-pro-side-1.webp" alt="Nova Pro">
+        </div>
+        <div class="cp-body">
+          <div class="cp-name">Nova Pro Edition</div>
+          <div class="cp-desc">Najbolji kvalitet-cena odnos na tržištu — idealan za rekreativne igrače i početnike. EVA Pro jezgro i 12K površina za solidan spin.</div>
+          <div class="cp-stats" style="margin-bottom:12px;">
+            <span class="cp-stat">365–375 g</span>
+            <span class="cp-stat">EVA Pro</span>
+            <span class="cp-stat">Visok balans</span>
+          </div>
+          <div class="cp-price">14.500 RSD</div>
+        </div>
+      </a>
+
+    </div><!-- /grid-prestige -->
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     VARIANT 4 — OVERLAY / HERO
+     ═══════════════════════════════════════════════ -->
+<section id="v4" class="demo-section">
+  <div class="container">
+    <div class="demo-head">
+      <h2>
+        <span class="blob" style="background:#e8b84b"></span>Overlay Hero
+        <span class="demo-chip">grid-overlay · card-overlay</span>
+      </h2>
+      <p class="desc">      Hero-style kartice — slika puna širina, naziv i cena stižu iz dna na hover, CTA dugme prokliza s desne.</p>
+    </div>
+
+    <div class="grid-overlay">
+
+      <!-- card 1 -->
+      <a href="#" class="card-overlay">
+        <div class="co-img"><img src="images/rackets/racket-prime-pro-1.webp" alt="Prime Pro"></div>
+        <div class="co-idle">
+          <div class="co-idle-name">Prime Pro Edition</div>
+          <div class="co-idle-price">39.900 RSD</div>
+        </div>
+        <div class="co-bar">
+          <div class="co-name">Prime Pro Edition</div>
+          <div class="co-price">39.900 RSD</div>
+          <div class="co-cta">Pogledaj <i class="fas fa-arrow-right"></i></div>
+        </div>
+      </a>
+
+      <!-- card 2 -->
+      <a href="#" class="card-overlay">
+        <div class="co-img"><img src="images/rackets/rialto-pro-1.webp" alt="Rialto Pro"></div>
+        <div class="co-idle">
+          <div class="co-idle-name">Rialto Pro 2.0</div>
+          <div class="co-idle-price">39.900 RSD</div>
+        </div>
+        <div class="co-bar">
+          <div class="co-name">Rialto Pro 2.0</div>
+          <div class="co-price">39.900 RSD</div>
+          <div class="co-cta">Pogledaj <i class="fas fa-arrow-right"></i></div>
+        </div>
+      </a>
+
+      <!-- card 3 -->
+      <a href="#" class="card-overlay">
+        <div class="co-img"><img src="images/rackets/rialto-pro-light-1.webp" alt="Rialto Light"></div>
+        <div class="co-idle">
+          <div class="co-idle-name">Rialto Pro Light 2.0</div>
+          <div class="co-idle-price">34.900 RSD</div>
+        </div>
+        <div class="co-bar">
+          <div class="co-name">Rialto Pro Light 2.0</div>
+          <div class="co-price">34.900 RSD</div>
+          <div class="co-cta">Pogledaj <i class="fas fa-arrow-right"></i></div>
+        </div>
+      </a>
+
+      <!-- card 4 -->
+      <a href="#" class="card-overlay">
+        <div class="co-img"><img src="images/rackets/prime-team-women-1.webp" alt="Prime Team"></div>
+        <div class="co-idle">
+          <div class="co-idle-name">Prime Team Women's</div>
+          <div class="co-idle-price">23.900 RSD</div>
+        </div>
+        <div class="co-bar">
+          <div class="co-name">Prime Team Women's</div>
+          <div class="co-price">23.900 RSD</div>
+          <div class="co-cta">Pogledaj <i class="fas fa-arrow-right"></i></div>
+        </div>
+      </a>
+
+      <!-- card 5 -->
+      <a href="#" class="card-overlay">
+        <div class="co-img"><img src="images/rackets/cobra-women-1.webp" alt="Cobra Women"></div>
+        <div class="co-idle">
+          <div class="co-idle-name">Cobra Women's</div>
+          <div class="co-idle-price">13.900 RSD</div>
+        </div>
+        <div class="co-bar">
+          <div class="co-name">Cobra Women's</div>
+          <div class="co-price">13.900 RSD</div>
+          <div class="co-cta">Pogledaj <i class="fas fa-arrow-right"></i></div>
+        </div>
+      </a>
+
+      <!-- card 6 -->
+      <a href="#" class="card-overlay">
+        <div class="co-img"><img src="images/rackets/nova-pro-side-1.webp" alt="Nova Pro"></div>
+        <div class="co-idle">
+          <div class="co-idle-name">Nova Pro Edition</div>
+          <div class="co-idle-price">14.500 RSD</div>
+        </div>
+        <div class="co-bar">
+          <div class="co-name">Nova Pro Edition</div>
+          <div class="co-price">14.500 RSD</div>
+          <div class="co-cta">Pogledaj <i class="fas fa-arrow-right"></i></div>
+        </div>
+      </a>
+
+      <!-- card 7 -->
+      <a href="#" class="card-overlay">
+        <div class="co-img"><img src="images/rackets/cobra-apex-1.webp" alt="Cobra Apex"></div>
+        <div class="co-idle">
+          <div class="co-idle-name">Cobra Apex Women's</div>
+          <div class="co-idle-price">15.000 RSD</div>
+        </div>
+        <div class="co-bar">
+          <div class="co-name">Cobra Apex Women's</div>
+          <div class="co-price">15.000 RSD</div>
+          <div class="co-cta">Pogledaj <i class="fas fa-arrow-right"></i></div>
+        </div>
+      </a>
+
+    </div><!-- /grid-overlay -->
+  </div>
+</section>
+
+<!-- ────────── FOOTER MINIMAL ────────── -->
+<footer style="background:var(--surface,#1E1310);color:rgba(255,255,255,.5);text-align:center;padding:28px 20px;font-size:.82rem;">
+  <p>&copy; 2026 Padel Platz Kraljevo — Grid Varianti demo</p>
+</footer>
+
+<script>
+/* nav highlight on scroll */
+const sections  = document.querySelectorAll('.demo-section');
+const navLinks  = document.querySelectorAll('.demo-nav a');
+function activate(link){ navLinks.forEach(l => l.classList.remove('active')); link.classList.add('active'); }
+
+window.addEventListener('scroll', () => {
+  let cur = '';
+  sections.forEach(s => {
+    if (window.scrollY >= s.offsetTop - 100) cur = s.id;
+  });
+  navLinks.forEach(l => {
+    l.classList.remove('active');
+    if (l.getAttribute('href') === '#' + cur) l.classList.add('active');
+    if (l.getAttribute('href') === 'shop.html' && !cur) l.classList.add('active');
+  });
+}, { passive: true });
+</script>
+</body>
+</html>

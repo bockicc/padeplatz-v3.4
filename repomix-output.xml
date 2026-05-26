@@ -1,0 +1,122 @@
+This file is a merged representation of a subset of the codebase, containing specifically included files, combined into a single document by Repomix.
+
+<file_summary>
+This section contains a summary of this file.
+
+<purpose>
+This file contains a packed representation of a subset of the repository's contents that is considered the most important context.
+It is designed to be easily consumable by AI systems for analysis, code review,
+or other automated processes.
+</purpose>
+
+<file_format>
+The content is organized as follows:
+1. This summary section
+2. Repository information
+3. Directory structure
+4. Repository files (if enabled)
+5. Multiple file entries, each consisting of:
+  - File path as an attribute
+  - Full contents of the file
+</file_format>
+
+<usage_guidelines>
+- This file should be treated as read-only. Any changes should be made to the
+  original repository files, not this packed version.
+- When processing this file, use the file path to distinguish
+  between different files in the repository.
+- Be aware that this file may contain sensitive information. Handle it with
+  the same level of security as you would the original repository.
+</usage_guidelines>
+
+<notes>
+- Some files may have been excluded based on .gitignore rules and Repomix's configuration
+- Binary files are not included in this packed representation. Please refer to the Repository Structure section for a complete list of file paths, including binary files
+- Only files matching these patterns are included: translations.js
+- Files matching patterns in .gitignore are excluded
+- Files matching default ignore patterns are excluded
+- Files are sorted by Git change count (files with more changes are at the bottom)
+</notes>
+
+</file_summary>
+
+<directory_structure>
+translations.js
+</directory_structure>
+
+<files>
+This section contains the contents of the repository's files.
+
+<file path="translations.js">
+'use strict';
+
+const translations = {
+  sr: {
+    lang: 'Srpski', code: 'SRB', currency: 'RSD', symbol: 'RSD', rate: 1,
+    nav: { home: 'Početna', about: 'O Nama', gallery: 'Galerija', pricing: 'Cenovnik', rules: 'Pravila', booking: 'Rezervacija', shop: 'Prodavnica', contact: 'Kontakt', bookNav: 'Rezerviši Termin' },
+    hero: { badge: 'PRVI PADEL CENTAR U KRALJEVU', title: 'PADEL IGRA<br><span>NA NAJVIŠEM NIVOU</span>', desc: '3 profesionalna terena • Vrhunska oprema • Besplatan parking • Odlično rasvetljenje', cta: 'Rezerviši Termin' },
+    lighting: { title: 'Noćno Osvetljenje', subtitle: 'Profesionalni LED reflektori omogućavaju savršenu igru danju i noću.', tag: 'LED OSVETLJENJE 24/7', heading: 'Noćna Igra Na Najvišem Nivou', f1: 'Profesionalni LED reflektori', f2: 'Ravnomerno rasvetljenje bez suzenja', f3: 'Prilagodljiva intenzivnost', f4: 'Energofikasno i ekološki' },
+    features: { title: 'Zašto Padel Platz?', desc: 'Tri razloga zašto je Padel Platz pravi izbor za vaše padel iskustvo', parking: 'Besplatan Parking', parkingDesc: 'Zabrana prevoznog stresa — parkirajte pored termina besplatno, ugodno i bez čekanja.', drinks: 'Uključen Osvežavajući', drinksDesc: 'Topla i hladna pića dostupna posle svake igre — cijeli dan, bez dodatnih troškova.', tourn: 'Redovni Turniri', tournDesc: 'Mesečni turniri i Grand Prix sezona za igrače svih nivoa — prijavite se i osvojite trofej!' },
+    tournaments: { title: 'Takmičenja i Turniri', desc: 'Učestvujte u našim turnirima i pokažite svoje veštine na parketu', card1: { title: 'Mesečni Open Turnir', desc: 'Otvoreno za igrače svih nivoa — od početnika do naprednih. Boduj se i zakazuj mesto!', step: '1 / 4', meta1: 'Prvi petak u mesecu', meta2: 'Trofej + nagrada', link: 'Prijavi se' }, card2: { title: 'Grand Prix Sezona', desc: 'Sakupljaj bodove tokom cele sezone i osvajaj mesto na finalnoj lestvici sa velikim nagradama.', step: '2 / 4', meta1: '6 turnira u sezoni', meta2: 'Finale u decembru', link: 'Detaljnije' }, card3: { title: 'Dnevni Mečevi', desc: 'Organizujte svoje mečeve uz profesionalan pratnji — rang-lista, sudije i sve.', step: '3 / 4', meta1: 'Počinje od 2 para', meta2: 'Svaki nivo', link: 'Kontaktiraj' } },
+    faq: { title: 'Česta Pitanja', desc: 'Pronađite odgovore na najčešća pitanja o padel igri, rezervaciji, cenovniku i našoj oprema.', q1: 'Kako da rezervišem teren za padel?', a1: 'Rezervacija terena je jednostavna! Pozovite nas na broj <strong>+381 66 8123 647</strong> ili pošaljite poruku putem našeg sistema za rezervaciju na sajtu. Takođe možete doći osobno na lokaciju i rezervisati termin direktno kod nas. Preporučujemo rezervaciju najmanje 24 sata unnapred, posebno za večernje termine i vikend.', q2: 'Da li je oprema dostupna?', a2: 'Da! Naš centar nudi potpunu opremu za iznajmljivanje — palaćke, lopta i pristup terenima. Imamo visokokvalitetnu opremu dostupnu za sve naše goste.', q3: 'Da li postoji članstvo?', a3: 'Da, nudimo različite nivo članstva — od mesečnog do godišnjeg sa posebnim popustima na termine.', q4: 'Koja je radna vremena?', a4: 'Pon-Pet: 08:00–24:00, Sub: 09:00–22:00, Ned: 10:00–20:00.', q5: 'Da li je padel za početnike?', a5: 'Apsolutno! Padel je lako naučljiv. Nudimo uvodne termine i pratenu obuku za sve.', q6: 'Koliko koštaju termini?', a6: 'Radni dan: 2.000 RSD/h, Večernji/vikend: 2.500 RSD/h, Grupni: 4.000 RSD/h.', q7: 'Gde se nalazite?', a7: 'Milomira Glavčića 18, Kraljevo. Za detaljnu mapu pogledajte našu kontakt stranicu.', q8: 'Da li nudite obuku?', a8: 'Da! Nudimo individualne i grupne obuke sa iskusnim trenerima.' },
+    pricing: { title: 'Cenovnik', desc: 'Pregledajte naše cene za slobodne i grupne termine.', weekday: 'Radni dan (08–16h)', weekdayP: '2.000', evwe: 'Večernji (16–24h) / Vikend', evweP: '2.500', group: 'Grupni termin', groupP: '4.000', d1: 'Najpovoljniji termini za igru u toku nedelje.', d2: 'Najpopularniji termini sa sjajnim LED osvetljenjem.', d3: 'Dva terena istovremeno — idealno za turnir.', i1: 'Osvežavajući uključen', i2: 'Besplatan parking', i3: 'Profesionalna oprema', i4: 'LED noćno osvetljenje', note: 'Za terne upitnice o članarini — kontaktirajte nas.' },
+    rules: { title: 'Kućna Pravila', r1: 'Rezervacija terena je obavezna', r2: 'Dolazite 10 minuta pre termina', r3: 'Sportska obuća obavezna', r4: 'Zabranjeno pušenje', r5: 'Pružite sopstvenu opremu ili iznajmite', r6: 'Poštujte druge igrače', r7: 'Otpaljanje nije dozvoljeno', r8: 'Deca uz roditeljsku pratnju', r9: 'Otvaranje vrata samo na čelu puta' },
+    contact: { title: 'Kontaktirajte Nas', sub: 'Imate pitanje? Pozovite nas!', fn: 'Ime i prezime', em: 'Email adresa', ph: 'Broj telefona', msg: 'Poruka', btn: 'Pošalji', ok: 'Uspešno poslato!', err: 'Došlo je do greške.' },
+    shop: { title: 'Prodavnica', desc: 'Izaberite savršen padel reket.', badgePro: 'Pro', badgeLight: 'Light', badgeWomen: 'Ženski', badgeValue: 'Vrednost', back: 'Nazad' },
+    pp: { name: 'Prime Pro Edition', price: '39.900', feat1: '3. generacija najprodavanijih padel reketa', feat2: 'Ikoničan RS dizajn', feat3: 'Manja težina od prethodnika', feat4: 'Superiorna stabilnost', feat5: 'RS Power Holes', feat6: 'Produžena drška 45,5 cm', spec1: '363 g', specBal: 'Srednji do visok', specMat: 'Karbon', specSh: 'Hibridni Tear Drop / Diamond', specFa: '12K Aluminizovano karbonsko vlakno', specGr: 'RS Grid Pattern', specPr: '38 mm', specDr: '455 mm' },
+    rp: { name: 'Rialto Pro 2.0', price: '39.900', feat1: 'RS najnaprednija tehnologija', feat2: 'Za amateure i profesionalce', feat3: '3D + Grid Lock sistem', feat4: 'Najveći sweet spot', spec1: '365 g', specBal: 'Srednji', specMat: '100% Karbon', specFa: '3K Aluminizovani Karbon', specGr: 'RS Grid Lock', specSh: 'Tear Drop', specPr: '38 mm' },
+    rl: { name: 'Rialto Pro Light 2.0', price: '34.900', feat1: 'Napredna tehnologija', feat2: 'Za sve nivoe', feat3: '3D + Grid Lock sistem', feat4: 'Jedinstven sweet spot', spec1: '355 g', specBal: 'Nizak', specMat: 'Karbon', specFa: '3K Karbon', specSh: 'Tear Drop', specPr: '38 mm' },
+    pw: { name: 'Prime Team Women\'s', price: '23.900', feat1: 'Za rekreativne igrače', feat2: 'Veliki sweet spot', feat3: 'Mekano jezgro', feat4: 'Lagan dizajn', feat5: 'Peskasta površina', feat6: 'Roza boja', spec1: '350-365 g', specBal: 'Srednji', specMat: 'Peskasta' },
+    cw: { name: 'Cobra Women\'s', price: '13.900', feat1: 'Lagan dizajn', feat2: 'Veliki sweet spot', feat3: 'Nizak balans', feat4: 'Japansko stakleno vlakno', feat5: 'EV30 jezgro', feat6: '3D površina', feat7: 'Mint zelena', spec1: '340 g', specBal: 'Nizak', specMat: 'Japansko lagano stakleno vlakno' },
+    ca: { name: 'Cobra Apex Women\'s', price: '15.000', feat1: '100% karbonsko vlakno', feat2: 'Japansko stakleno vlakno', feat3: 'Mekano EVA jezgro', feat4: 'Suženi profil', feat5: 'Za napredne igrače', spec1: '~340 g', specBal: 'Nizak', specMat: '100% aluminizovano karbonsko vlakno' },
+    np: { name: 'Nova Pro Edition', price: '14.500', feat1: 'Sa Simonom Vasquezom', feat2: 'Produžena drška', feat3: 'Dynamic Hex okvir', feat4: 'Axis Force stabilizator', feat5: 'EVA Pro jezgro', feat6: '12K karbonska vlakna', spec1: '365-375 g', specBal: 'Visok', specMat: 'Karbon' },
+    product: { back: 'Nazad', features: 'Ključne karakteristike', specs: 'Specifikacije', weight: 'Težina', balance: 'Balans', shape: 'Oblik', profile: 'Profil', grip: 'Grip uzgona', core: 'Jezgro', surface: 'Površina' },
+    footer: { about: 'Prvi padel centar u Kraljevu.', links: 'Brzi Linkovi', hours: 'Radno Vreme', contactTitle: 'Kontakt', monFri: 'Pon-Pet: 08:00-24:00', sat: 'Sub: 09:00-22:00', sun: 'Ned: 10:00-20:00', copyright: '© 2026 Padel Platz Kraljevo.' },
+    gallery: { title: 'Galerija', desc: 'Pregledajte naše terene i turnire.', all: 'Sve', courts: 'Tereni', lighting: 'Osvetljenje', tournaments: 'Turniri', atmosphere: 'Atmosfera' },
+    res: { title: 'Rezerviši Termin', desc: 'Izaberite datum — slobodni termini su označeni zelenom bojom.', tToday: 'Danas', tFree: 'Slobodan', tSel: 'Izabran', tBooked: 'Zauzet', fn: 'Ime i prezime', ph: 'Broj telefona', em: 'Email', dt: 'Datum', tm: 'Vreme', pl: 'Broj igrača', msg: 'Napomena', btn: 'Pošalji', sumT: 'Rezervacija poslata!', sDate: 'Datum', sTime: 'Vreme', sPl: 'Igrači', sNm: 'Ime', sBtn: 'Nazad', cTitle: 'Niste sigurni za datum?', cDesc: 'Javite nam pa ćemo predložiti termin.', cBtn: 'Kontaktirajte nas' },
+    about: { title: 'O Nama', sub: 'Prvi padel centar u Kraljevu', mission: 'Naša misija', mText: 'Želimo da padel postane deo svakodnevnog života našeg grada.', t1: 'Padel Platz osnovan je sa željom da donese ovaj sport u naš grad na najviši nivo.', t2: 'Imamo 3 profesionalna otvorena terena sa vrhunskom oblogom i opremom.', t3: 'Nakon svake igre, možete uživati u besplatne osvežavajuće i besplatan parking.', cta: 'Rezerviši Termin' },
+    cta: { title: 'Spremni za Igru?', desc: 'Rezervišite svoj termin danas!', cBtn: 'Pozovite Nas' },
+    // Purchase price rates for currency conversion (base in RSD)
+    purchaseRates: {
+      weekday: 1200,   // RSD base: 1200 → EUR: 10
+      evwe: 1500,      // RSD base: 1500 → EUR: 12.50
+      group: 3400      // RSD base: 3400 → EUR: 28.90
+    }
+  },
+  en: {
+    lang: 'English', code: 'ENG', currency: 'EUR', symbol: '€', rate: 0.0085,
+    nav: { home: 'Home', about: 'About Us', gallery: 'Gallery', pricing: 'Pricing', rules: 'Rules', booking: 'Booking', shop: 'Shop', contact: 'Contact', bookNav: 'Book Court' },
+    hero: { badge: 'FIRST PADEL CENTER IN KRALJEVO', title: 'PADEL PLAY<br><span>AT THE HIGHEST LEVEL</span>', desc: '3 professional courts • Top equipment • Free parking • Excellent lighting', cta: 'Book Court' },
+    lighting: { title: 'Night Lighting', subtitle: 'Professional LED lighting provides perfect visibility during every game.', tag: 'LED LIGHTING 24/7', heading: 'Night Play At The Highest Level', f1: 'Professional LED Lights', f2: 'Even lighting without shadows', f3: 'Adjustable intensity', f4: 'Energy efficient & eco-friendly' },
+    features: { title: 'Why Padel Platz?', desc: 'Three reasons why Padel Platz is the right choice for your padel experience', parking: 'Free Parking', parkingDesc: 'No transport stress — park next to the court, free of charge.', drinks: 'Drinks Included', drinksDesc: 'Hot and cold drinks after every game — all day, no extra cost.', tourn: 'Regular Tournaments', tournDesc: 'Monthly tournaments and Grand Prix season for all levels.' },
+    tournaments: { title: 'Tournaments', desc: 'Participate in our tournaments and showcase your skills on the court', card1: { title: 'Monthly Open Tournament', desc: 'Open to players of all levels — from beginners to advanced. Sign up and claim your spot!', step: '1 / 4', meta1: 'First Friday of the month', meta2: 'Trophy + prize', link: 'Sign Up' }, card2: { title: 'Grand Prix Season', desc: 'Accumulate points throughout the season and climb the final leaderboard for big prizes.', step: '2 / 4', meta1: '6 tournaments per season', meta2: 'December finale', link: 'Details' }, card3: { title: 'Daily Matches', desc: 'Organize your matches with professional support — rankings, referees, and more.', step: '3 / 4', meta1: 'Starting from 2 pairs', meta2: 'All levels', link: 'Contact' } },
+    faq: { title: 'FAQ', desc: 'Find answers to the most common questions about padel, booking, pricing, and our facilities.' },
+    pricing: { title: 'Pricing', desc: 'Check out our prices for open and group sessions.', weekday: 'Weekday (08–16h)', evwe: 'Evening (16–24h) / Weekend', group: 'Group session', d1: 'Most affordable rates for weekday play.', d2: 'Popular slots with brilliant LED night lighting.', d3: 'Two courts simultaneously — perfect for tournaments.' },
+    rules: { title: 'House Rules' },
+    contact: { title: 'Contact', formName: 'Name', formEmail: 'Email', formPhone: 'Phone', formDate: 'Preferred Date', formTime: 'Preferred Time', formMsg: 'Message', formBtn: 'Send', success: 'Message sent successfully!', error: 'An error occurred. Please try again.' },
+    shop: { title: 'Shop', desc: 'Choose your perfect padel racket — professional models from leading brands for players of all levels.', badgePro: 'Pro', badgeLight: 'Light', badgeWomen: "Women's", badgeValue: 'Value', detail: 'Details' },
+    product: { back: 'Back to Shop', features: 'Key Features', specs: 'Specifications' },
+    footer: { about: 'First padel center in Kraljevo — your padel experience comes first.', links: 'Quick Links', hours: 'Working Hours', contactTitle: 'Contact', monFri: 'Mon - Fri: 08:00 - 24:00', sat: 'Saturday: 09:00 - 22:00', sun: 'Sunday: 10:00 - 20:00', copyright: '© 2026 Padel Platz Kraljevo. All rights reserved.' },
+    gallery: { all: 'All', courts: 'Courts', events: 'Events', facilities: 'Facilities' },
+    rulesList: ['Court reservation is mandatory', 'Arrive 10 minutes before your booked time', 'Clean court shoes are required', 'No smoking on the courts', 'Bring your own equipment or rent on-site', 'Respect other players and the court', 'Ball warming is not allowed on court', 'Children are welcome with parental supervision', 'Gates open only during play hours'],
+    purchaseRates: { weekday: 1200, evwe: 1500, group: 3400 }
+  },
+  hr: {
+    lang: 'Hrvatski', code: 'HRV', currency: 'EUR', symbol: '€', rate: 0.0085,
+    purchaseRates: { weekday: 1200, evwe: 1500, group: 3400 },
+    pricing: { title: 'Cijene', desc: 'Pregledajte naše cijene za slobodne i grupne termine.', weekday: 'Radni dan (08–16h)', evwe: 'Večernji (16–24h) / Vikend', group: 'Grupni termin' }
+  },
+  es: {
+    lang: 'Español', code: 'ESP', currency: 'EUR', symbol: '€', rate: 0.0085,
+    purchaseRates: { weekday: 1200, evwe: 1500, group: 3400 },
+    pricing: { title: 'Precios', desc: 'Consulta nuestros precios para pistas abiertas y grupales.', weekday: 'Día laborable (08–16h)', evwe: 'Noche (16–24h) / Fin de semana', group: 'Sesión grupal' }
+  },
+  de: {
+    lang: 'Deutsch', code: 'DEU', currency: 'EUR', symbol: '€', rate: 0.0085,
+    purchaseRates: { weekday: 1200, evwe: 1500, group: 3400 },
+    pricing: { title: 'Preise', desc: 'Sehen Sie sich unsere Preise für offene und Gruppensitzungen an.', weekday: 'Werktag (08–16h)', evwe: 'Abend (16–24h) / Wochenende', group: 'Gruppensitzung' }
+  }
+};
+</file>
+
+</files>
